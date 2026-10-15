@@ -1,0 +1,1161 @@
+{
+ "camera": "Sony RX100 VII",
+ "model": "DSC-RX100M7",
+ "researchedOn": "2026-10-15",
+ "officialParams": {
+  "system": "Creative Style（不是 Creative Look）。RX100 VII 說明指南只有 [Creative Style] 選單，沒有 Creative Look 的 Highlights/Shadows/Fade/Clarity 參數。",
+  "creativeStyles": [
+   {
+    "name": "Standard",
+    "nameZh": "標準"
+   },
+   {
+    "name": "Vivid",
+    "nameZh": "鮮豔"
+   },
+   {
+    "name": "Neutral",
+    "nameZh": "中性"
+   },
+   {
+    "name": "Clear",
+    "nameZh": "清澈"
+   },
+   {
+    "name": "Deep",
+    "nameZh": "深色"
+   },
+   {
+    "name": "Light",
+    "nameZh": "淡色"
+   },
+   {
+    "name": "Portrait",
+    "nameZh": "人像"
+   },
+   {
+    "name": "Landscape",
+    "nameZh": "風景"
+   },
+   {
+    "name": "Sunset",
+    "nameZh": "夕陽"
+   },
+   {
+    "name": "Night Scene",
+    "nameZh": "夜景"
+   },
+   {
+    "name": "Autumn leaves",
+    "nameZh": "秋葉"
+   },
+   {
+    "name": "Black & White",
+    "nameZh": "黑白"
+   },
+   {
+    "name": "Sepia",
+    "nameZh": "棕褐色"
+   },
+   {
+    "name": "Style Box (1–6)",
+    "nameZh": "風格箱 6 組",
+    "note": "6 個編號格，可把任一風格連同對比／飽和度／銳利度另存一組"
+   }
+  ],
+  "pictureEffects": [
+   {
+    "name": "Toy Camera",
+    "nameZh": "玩具相機",
+    "movie": true
+   },
+   {
+    "name": "Pop Color",
+    "nameZh": "普普色彩",
+    "movie": true
+   },
+   {
+    "name": "Posterization",
+    "nameZh": "色調分離",
+    "movie": true
+   },
+   {
+    "name": "Retro Photo",
+    "nameZh": "復古相片",
+    "movie": true
+   },
+   {
+    "name": "Soft High-key",
+    "nameZh": "柔和高調",
+    "movie": true
+   },
+   {
+    "name": "Partial Color",
+    "nameZh": "部分色彩",
+    "movie": true
+   },
+   {
+    "name": "High Contrast Mono.",
+    "nameZh": "高對比單色",
+    "movie": true
+   },
+   {
+    "name": "Soft Focus",
+    "nameZh": "柔焦",
+    "movie": false
+   },
+   {
+    "name": "HDR Painting",
+    "nameZh": "HDR 繪畫",
+    "movie": false,
+    "note": "一次按快門連拍 3 張合成"
+   },
+   {
+    "name": "Rich-tone Mono.",
+    "nameZh": "豐富色調單色",
+    "movie": false,
+    "note": "一次按快門連拍 3 張合成"
+   },
+   {
+    "name": "Miniature",
+    "nameZh": "微縮景觀",
+    "movie": false
+   },
+   {
+    "name": "Watercolor",
+    "nameZh": "水彩畫",
+    "movie": false
+   },
+   {
+    "name": "Illustration",
+    "nameZh": "插畫",
+    "movie": false
+   }
+  ],
+  "pictureEffectRestrictions": [
+   "File Format 設為 RAW 或 RAW & JPEG 時不能用 Picture Effect",
+   "Intelligent Auto、Superior Auto、Scene Selection、Sweep Panorama 模式不能用",
+   "Soft Focus／HDR Painting／Rich-tone Mono.／Miniature／Watercolor／Illustration 拍後才處理、拍攝畫面看不到效果、不能用於動態影像",
+   "Picture Effect 不是 Off 時：Creative Style 固定 Standard、DRO 固定 Off、Auto HDR 不能用",
+   "說明指南只說部分效果可用控制轉盤左右做細部設定，沒有列出子選項名稱（見 gaps）"
+  ],
+  "adjustable": [
+   {
+    "name": "Contrast",
+    "nameZh": "對比",
+    "range": "-3 ~ +3（說明指南內文未寫數字，見 gaps）",
+    "appliesTo": "Creative Style（含 Style Box）"
+   },
+   {
+    "name": "Saturation",
+    "nameZh": "飽和度",
+    "range": "-3 ~ +3（同上）",
+    "appliesTo": "Creative Style；Black & White／Sepia 時不可調"
+   },
+   {
+    "name": "Sharpness",
+    "nameZh": "銳利度",
+    "range": "-3 ~ +3（同上）",
+    "appliesTo": "Creative Style"
+   },
+   {
+    "name": "Black Level",
+    "nameZh": "黑階",
+    "range": "-15 ~ +15",
+    "appliesTo": "Picture Profile；ITU709(800%)／S-Log2／S-Log3 時停用"
+   },
+   {
+    "name": "Gamma",
+    "nameZh": "伽瑪曲線",
+    "range": "Movie, Still, Cine1, Cine2, ITU709, ITU709(800%), S-Log2, S-Log3, HLG, HLG1, HLG2, HLG3",
+    "appliesTo": "Picture Profile"
+   },
+   {
+    "name": "Black Gamma",
+    "nameZh": "黑伽瑪",
+    "range": "Range: Wide / Middle / Narrow；Level: -7 ~ +7",
+    "appliesTo": "Picture Profile；HLG 系列或 120p/100p 錄影設定時固定 0"
+   },
+   {
+    "name": "Knee",
+    "nameZh": "膝點",
+    "range": "Mode: Auto / Manual；Auto Set: Max Point 90%~100%、Sensitivity High/Mid/Low；Manual Set: Point 75%~105%、Slope -5 ~ +5",
+    "appliesTo": "Picture Profile；Still/Cine1/Cine2/ITU709(800%)/S-Log/HLG 在 Auto 時無效，Slope +5 時也無效"
+   },
+   {
+    "name": "Color Mode",
+    "nameZh": "色彩模式",
+    "range": "Movie, Still, Cinema, Pro, ITU709 Matrix, Black & White, S-Gamut, S-Gamut3.Cine, S-Gamut3, BT.2020, 709",
+    "appliesTo": "Picture Profile；HLG 系列只能選 BT.2020 或 709"
+   },
+   {
+    "name": "Saturation (PP)",
+    "nameZh": "飽和度（PP）",
+    "range": "-32 ~ +32",
+    "appliesTo": "Picture Profile"
+   },
+   {
+    "name": "Color Phase",
+    "nameZh": "色相",
+    "range": "-7 ~ +7",
+    "appliesTo": "Picture Profile"
+   },
+   {
+    "name": "Color Depth",
+    "nameZh": "色彩深度",
+    "range": "R / G / B / C / M / Y 各 -7 ~ +7",
+    "appliesTo": "Picture Profile；Black & White 色彩模式下仍有效"
+   },
+   {
+    "name": "Detail",
+    "nameZh": "細節",
+    "range": "Level -7 ~ +7；Adjust: Mode Auto/Manual、V/H Balance -2~+2、B/W Balance Type1~Type5、Limit 0~7、Crispning 0~7、Hi-Light Detail 0~4",
+    "appliesTo": "Picture Profile"
+   }
+  ],
+  "whiteBalance": {
+   "presets": [
+    "Auto",
+    "Daylight",
+    "Shade",
+    "Cloudy",
+    "Incandescent",
+    "Fluor.: Warm White",
+    "Fluor.: Cool White",
+    "Fluor.: Day White",
+    "Fluor.: Daylight",
+    "Flash",
+    "Underwater Auto",
+    "C.Temp./Filter",
+    "Custom 1",
+    "Custom 2",
+    "Custom 3"
+   ],
+   "priorityInAWB": "Priority Set in AWB：Standard / Ambience（保留光源氣氛、偏暖）/ White（低色溫光源下優先還原白色）",
+   "fineTune": "在白平衡畫面按控制轉盤右側進入微調；官方規格：G7 ~ M7 共 57 段（每段 0.25）、A7 ~ B7 共 29 段（每段 0.5）",
+   "colorTempRange": "C.Temp./Filter 可設色溫並模擬 CC 濾鏡；RX100 VII 官方文件未寫出色溫上下限（見 gaps）",
+   "notes": "Intelligent Auto／Superior Auto／Scene Selection 時白平衡固定 Auto；有 WB bracket 包圍拍攝"
+  },
+  "dro": {
+   "D-Range Optimizer": "Off / Auto / Lv1（弱）~ Lv5（強）",
+   "Auto HDR": "Auto / 1.0EV ~ 6.0EV（1.0EV 一級），一次拍 3 張合成",
+   "restrictions": "DRO 在 Picture Effect 或 Picture Profile 不是 Off、Multi Frame NR、Sweep Panorama、120p/100p 錄影時固定 Off；Auto HDR 不能搭配 RAW／RAW & JPEG、Picture Effect、Picture Profile"
+  },
+  "pictureProfile": {
+   "slots": "PP1 ~ PP10（沒有 PP11、沒有 S-Cinetone；Gamma 沒有 Cine3、Cine4）",
+   "presets": [
+    {
+     "pp": "PP1",
+     "default": "Movie gamma 範例"
+    },
+    {
+     "pp": "PP2",
+     "default": "Still gamma 範例"
+    },
+    {
+     "pp": "PP3",
+     "default": "ITU709 gamma 的自然色調範例"
+    },
+    {
+     "pp": "PP4",
+     "default": "忠於 ITU709 標準的色調範例（說明指南未寫 gamma／色彩模式）"
+    },
+    {
+     "pp": "PP5",
+     "default": "Cine1 gamma 範例"
+    },
+    {
+     "pp": "PP6",
+     "default": "Cine2 gamma 範例"
+    },
+    {
+     "pp": "PP7",
+     "default": "S-Log2 gamma 範例"
+    },
+    {
+     "pp": "PP8",
+     "default": "S-Log3 gamma＋S-Gamut3.Cine"
+    },
+    {
+     "pp": "PP9",
+     "default": "S-Log3 gamma＋S-Gamut3"
+    },
+    {
+     "pp": "PP10",
+     "default": "HLG2 gamma 的 HDR 錄影範例"
+    }
+   ],
+   "stillsToo": "說明指南：動態影像與靜態影像共用同一組 PP 參數，所以 PP 配方也會套在 JPEG 上",
+   "rawNote": "用相機設定顯影 RAW 時，Black Level、Black Gamma、Knee、Color Depth 不會反映",
+   "otherNotes": "換 Gamma 會改變可用 ISO 範圍；S-Log2／S-Log3 雜訊較明顯；S-Gamut 系列只是近似色彩，不是完整色域；PP 不是 Off 時 Creative Style 固定 Standard、DRO 固定 Off",
+   "copyReset": "可用 Copy 把設定複製到其他 PP 編號；Reset 只能一組一組重設"
+  },
+  "gammaDispAssist": "Setup 選單有 Gamma Disp. Assist（Off / Auto / S-Log2→709(800%) / S-Log3→709(800%) / HLG(BT.2020) / HLG(709)），只改螢幕與觀景窗顯示，不影響錄下的檔案，也不套到外接 HDMI 螢幕",
+  "lutSupport": "不支援機內載入 LUT。RX100 VII 說明指南全文沒有 LUT 匯入或 User LUT 選單；唯一相關的是只影響顯示的 Gamma Disp. Assist。Sony 創作者指南把「Using LUTs in shooting」列在有 Log Shooting Setting 選單的機型，RX100 VII 沒有這個選單。",
+  "otherImage": "Color Space：sRGB / Adobe RGB（官方規格）；Soft Skin Effect（靜態影像）",
+  "notes": "Creative Style、白平衡、DRO 在 Intelligent Auto／Superior Auto／Scene Selection 會被鎖定；Picture Effect、Picture Profile 會讓 Creative Style 固定 Standard 並關閉 DRO，所以一組配方只能三選一當底：Creative Style 系、Picture Effect 系或 Picture Profile 系。",
+  "sources": [
+   "https://helpguide.sony.net/dsc/1920/v1/en/index.html",
+   "https://helpguide.sony.net/dsc/1920/v1/en/contents/TP0001140462.html",
+   "https://helpguide.sony.net/dsc/1920/v1/en/contents/TP0001140461.html",
+   "https://helpguide.sony.net/dsc/1920/v1/en/contents/TP0001140459.html",
+   "https://helpguide.sony.net/dsc/1920/v1/en/contents/TP0001140457.html",
+   "https://helpguide.sony.net/dsc/1920/v1/en/contents/TP0001140458.html",
+   "https://helpguide.sony.net/dsc/1920/v1/en/contents/TP0001211745.html",
+   "https://helpguide.sony.net/dsc/1920/v1/en/contents/TP0001211782.html",
+   "https://helpguide.sony.net/dsc/1920/v1/en/print.pdf",
+   "https://helpguide.sony.net/di/pp/v1/en/index.html",
+   "https://helpguide.sony.net/di/pp/v1/en/contents/TP0000909106.html",
+   "https://store.sony.com.my/blogs/4334715994146_31121689411618/4334715994146_specifications"
+  ]
+ },
+ "recipes": [
+  {
+   "name": "Kodachrome 64",
+   "nameZh": "柯達克羅姆 64",
+   "author": "Paolo70",
+   "sourceUrl": "https://www.sonyalphaforum.com/topic/22223-how-to-some-film-simulation-recipes/",
+   "originalModel": "Sony A6100",
+   "type": "photo",
+   "base": "Creative Style: Vivid",
+   "settings": {
+    "Creative Style": "Vivid",
+    "Creative Style (原文寫法)": "VIVID+0-2+0",
+    "Contrast": "+0",
+    "Saturation": "-2",
+    "Sharpness": "+0",
+    "White Balance": "Fluor.: Cool White",
+    "WB Shift": "A+6.5, G+5.5"
+   },
+   "lookZh": "底色偏暖偏綠，鮮豔風格但壓掉兩級飽和，像褪了一點的老幻燈片",
+   "bestFor": "晴天戶外、街景、懷舊旅行照",
+   "rx100m7Compatible": "完全（全部選項 RX100 VII 都有：Fluor.: Cool White／Fluor.: Day White 預設、A-B 0.5 級、G-M 0.25 級微調、該 Creative Style 皆在選單內。原文用「風格+對比+飽和+銳利」縮寫，作者舉例說明第二個數字是飽和度，三個數字依此解讀。）",
+   "verified": true
+  },
+  {
+   "name": "Portra 160",
+   "nameZh": "波特拉 160",
+   "author": "Paolo70",
+   "sourceUrl": "https://www.sonyalphaforum.com/topic/22223-how-to-some-film-simulation-recipes/",
+   "originalModel": "Sony A6100",
+   "type": "photo",
+   "base": "Creative Style: Portrait",
+   "settings": {
+    "Creative Style": "Portrait",
+    "Creative Style (原文寫法)": "PORTRAIT+0-1+1",
+    "Contrast": "+0",
+    "Saturation": "-1",
+    "Sharpness": "+1",
+    "White Balance": "Fluor.: Cool White",
+    "WB Shift": "A+6.5, G+5.5"
+   },
+   "lookZh": "暖黃帶綠的負片味，膚色柔和、飽和略收",
+   "bestFor": "戶外人像、生活紀錄",
+   "rx100m7Compatible": "完全（全部選項 RX100 VII 都有：Fluor.: Cool White／Fluor.: Day White 預設、A-B 0.5 級、G-M 0.25 級微調、該 Creative Style 皆在選單內。原文用「風格+對比+飽和+銳利」縮寫，作者舉例說明第二個數字是飽和度，三個數字依此解讀。）",
+   "verified": true
+  },
+  {
+   "name": "Ektar 100",
+   "nameZh": "艾克塔 100",
+   "author": "Paolo70",
+   "sourceUrl": "https://www.sonyalphaforum.com/topic/22223-how-to-some-film-simulation-recipes/",
+   "originalModel": "Sony A6100",
+   "type": "photo",
+   "base": "Creative Style: Landscape",
+   "settings": {
+    "Creative Style": "Landscape",
+    "Creative Style (原文寫法)": "LANDSCAPE-3+0-1",
+    "Contrast": "-3",
+    "Saturation": "+0",
+    "Sharpness": "-1",
+    "White Balance": "Fluor.: Cool White",
+    "WB Shift": "A+6.5, G+5.5"
+   },
+   "lookZh": "風景風格的濃色配上最低對比，色彩飽滿但階調平、偏暖",
+   "bestFor": "風景、天空、建築",
+   "rx100m7Compatible": "完全（全部選項 RX100 VII 都有：Fluor.: Cool White／Fluor.: Day White 預設、A-B 0.5 級、G-M 0.25 級微調、該 Creative Style 皆在選單內。原文用「風格+對比+飽和+銳利」縮寫，作者舉例說明第二個數字是飽和度，三個數字依此解讀。）",
+   "verified": true
+  },
+  {
+   "name": "Elitechrome 100",
+   "nameZh": "精英幻燈 100",
+   "author": "Paolo70",
+   "sourceUrl": "https://www.sonyalphaforum.com/topic/22223-how-to-some-film-simulation-recipes/",
+   "originalModel": "Sony A6100",
+   "type": "photo",
+   "base": "Creative Style: Standard",
+   "settings": {
+    "Creative Style": "Standard",
+    "Creative Style (原文寫法)": "STANDARD+0+0+0",
+    "Contrast": "+0",
+    "Saturation": "+0",
+    "Sharpness": "+0",
+    "White Balance": "Fluor.: Cool White",
+    "WB Shift": "A+6.5, G+5.5"
+   },
+   "lookZh": "標準風格不動，只靠白平衡把整體推向暖綠",
+   "bestFor": "日常隨拍，想要簡單暖調時",
+   "rx100m7Compatible": "完全（全部選項 RX100 VII 都有：Fluor.: Cool White／Fluor.: Day White 預設、A-B 0.5 級、G-M 0.25 級微調、該 Creative Style 皆在選單內。原文用「風格+對比+飽和+銳利」縮寫，作者舉例說明第二個數字是飽和度，三個數字依此解讀。）",
+   "verified": true
+  },
+  {
+   "name": "Velvia 100",
+   "nameZh": "威維雅 100",
+   "author": "Paolo70",
+   "sourceUrl": "https://www.sonyalphaforum.com/topic/22223-how-to-some-film-simulation-recipes/",
+   "originalModel": "Sony A6100",
+   "type": "photo",
+   "base": "Creative Style: Sunset",
+   "settings": {
+    "Creative Style": "Sunset",
+    "Creative Style (原文寫法)": "SUNSET-1+0+0",
+    "Contrast": "-1",
+    "Saturation": "+0",
+    "Sharpness": "+0",
+    "White Balance": "Fluor.: Day White",
+    "WB Shift": "G+0.75"
+   },
+   "lookZh": "夕陽風格的濃紅暖色，白平衡微偏綠，像高飽和正片",
+   "bestFor": "日出日落、花卉、秋景",
+   "rx100m7Compatible": "完全（全部選項 RX100 VII 都有：Fluor.: Cool White／Fluor.: Day White 預設、A-B 0.5 級、G-M 0.25 級微調、該 Creative Style 皆在選單內。原文用「風格+對比+飽和+銳利」縮寫，作者舉例說明第二個數字是飽和度，三個數字依此解讀。）",
+   "verified": true
+  },
+  {
+   "name": "Superia 200",
+   "nameZh": "速利亞 200",
+   "author": "Paolo70",
+   "sourceUrl": "https://www.sonyalphaforum.com/topic/22223-how-to-some-film-simulation-recipes/",
+   "originalModel": "Sony A6100",
+   "type": "photo",
+   "base": "Creative Style: Portrait",
+   "settings": {
+    "Creative Style": "Portrait",
+    "Creative Style (原文寫法)": "PORTRAIT+0-1+1",
+    "Contrast": "+0",
+    "Saturation": "-1",
+    "Sharpness": "+1",
+    "White Balance": "Fluor.: Day White",
+    "WB Shift": "G+0.75"
+   },
+   "lookZh": "略帶綠調的日常負片色，飽和收一點、輪廓稍銳",
+   "bestFor": "街拍、家庭紀錄",
+   "rx100m7Compatible": "完全（全部選項 RX100 VII 都有：Fluor.: Cool White／Fluor.: Day White 預設、A-B 0.5 級、G-M 0.25 級微調、該 Creative Style 皆在選單內。原文用「風格+對比+飽和+銳利」縮寫，作者舉例說明第二個數字是飽和度，三個數字依此解讀。）",
+   "verified": true
+  },
+  {
+   "name": "Acros II 100",
+   "nameZh": "艾克羅斯 II 100",
+   "author": "Paolo70",
+   "sourceUrl": "https://www.sonyalphaforum.com/topic/22223-how-to-some-film-simulation-recipes/",
+   "originalModel": "Sony A6100",
+   "type": "photo",
+   "base": "Creative Style: Black & White",
+   "settings": {
+    "Creative Style": "Black & White",
+    "Creative Style (原文寫法)": "BW-1+0",
+    "Contrast": "-1",
+    "Sharpness": "+0",
+    "White Balance": "Fluor.: Day White",
+    "WB Shift": "G+0.75"
+   },
+   "lookZh": "對比略降的黑白，灰階柔順",
+   "bestFor": "黑白街拍、人文紀錄",
+   "rx100m7Compatible": "完全（黑白時飽和度不可調，原文只給兩個數字；依作者格式解讀為對比 -1、銳利 +0，原文沒逐項標明。黑白模式下白平衡偏移對成品影響有限，原文仍保留）",
+   "verified": true
+  },
+  {
+   "name": "Kodak Portra 400",
+   "nameZh": "柯達 Portra 400",
+   "author": "André Domingues（voxivoid，Recipe Lab）",
+   "sourceUrl": "https://github.com/voxivoid/recipe-lab-sony-pmca/blob/2bdcb82fc8/src/com/voxivoid/recipelab/Recipes.java",
+   "originalModel": "Sony A6000（ILCE-6000）",
+   "type": "photo",
+   "base": "Creative Style: Portrait",
+   "settings": {
+    "Creative Style": "Portrait",
+    "Saturation": "-1",
+    "Contrast": "-1",
+    "Sharpness": "0",
+    "White Balance": "Auto",
+    "WB Shift": "A3 G1",
+    "Exposure Comp.": "+0.7EV（原始碼存 1/3 級整數，換算後）",
+    "DRO": "Auto"
+   },
+   "lookZh": "偏金黃的柔和膚色，對比與飽和都輕輕收，曝光略亮",
+   "bestFor": "人像、逆光、日常生活照",
+   "rx100m7Compatible": "完全（Creative Style、對比、飽和、銳利、白平衡（Auto 或色溫）、A-B／G-M 整數微調、曝光補償、DRO 都是 RX100 VII 選單內的項目。作者註明 Portrait／Landscape／Clear／Deep／Light 等風格在機身儲存的代碼是依選單順序推測，只有 Standard/Vivid/Neutral/B&W/Sepia 實機核對過，所以 Portrait 底的配方實際風格有一點不確定。）",
+   "verified": true
+  },
+  {
+   "name": "Kodak Gold 200",
+   "nameZh": "柯達金 200",
+   "author": "André Domingues（voxivoid，Recipe Lab）",
+   "sourceUrl": "https://github.com/voxivoid/recipe-lab-sony-pmca/blob/2bdcb82fc8/src/com/voxivoid/recipelab/Recipes.java",
+   "originalModel": "Sony A6000（ILCE-6000）",
+   "type": "photo",
+   "base": "Creative Style: Standard",
+   "settings": {
+    "Creative Style": "Standard",
+    "Saturation": "+2",
+    "Contrast": "+1",
+    "Sharpness": "0",
+    "White Balance": "Auto",
+    "WB Shift": "A3 G1",
+    "Exposure Comp.": "+0.3EV（原始碼存 1/3 級整數，換算後）",
+    "DRO": "Auto"
+   },
+   "lookZh": "暖黃又飽和的平價負片感，夏天氣氛重",
+   "bestFor": "晴天出遊、海邊、親子",
+   "rx100m7Compatible": "完全（Creative Style、對比、飽和、銳利、白平衡（Auto 或色溫）、A-B／G-M 整數微調、曝光補償、DRO 都是 RX100 VII 選單內的項目。）",
+   "verified": true
+  },
+  {
+   "name": "Classic Chrome",
+   "nameZh": "經典正片（Classic Chrome 仿）",
+   "author": "André Domingues（voxivoid，Recipe Lab）",
+   "sourceUrl": "https://github.com/voxivoid/recipe-lab-sony-pmca/blob/2bdcb82fc8/src/com/voxivoid/recipelab/Recipes.java",
+   "originalModel": "Sony A6000（ILCE-6000）",
+   "type": "photo",
+   "base": "Creative Style: Standard",
+   "settings": {
+    "Creative Style": "Standard",
+    "Saturation": "-1",
+    "Contrast": "+2",
+    "Sharpness": "0",
+    "White Balance": "Auto",
+    "WB Shift": "A3 G1",
+    "Exposure Comp.": "-0.3EV（原始碼存 1/3 級整數，換算後）",
+    "DRO": "Auto"
+   },
+   "lookZh": "偏金色、藍色被壓淡、對比偏硬的紀實調",
+   "bestFor": "街拍、城市、紀實",
+   "rx100m7Compatible": "完全（Creative Style、對比、飽和、銳利、白平衡（Auto 或色溫）、A-B／G-M 整數微調、曝光補償、DRO 都是 RX100 VII 選單內的項目。）",
+   "verified": true
+  },
+  {
+   "name": "Eterna Bleach Bypass",
+   "nameZh": "永恆漂白略過",
+   "author": "André Domingues（voxivoid，Recipe Lab）",
+   "sourceUrl": "https://github.com/voxivoid/recipe-lab-sony-pmca/blob/2bdcb82fc8/src/com/voxivoid/recipelab/Recipes.java",
+   "originalModel": "Sony A6000（ILCE-6000）",
+   "type": "photo",
+   "base": "Creative Style: Neutral",
+   "settings": {
+    "Creative Style": "Neutral",
+    "Saturation": "-3",
+    "Contrast": "+3",
+    "Sharpness": "0",
+    "White Balance": "Auto",
+    "WB Shift": "0",
+    "Exposure Comp.": "-0.3EV（原始碼存 1/3 級整數，換算後）",
+    "DRO": "Off"
+   },
+   "lookZh": "色彩幾乎抽乾、反差拉滿的電影漂白感",
+   "bestFor": "陰天街景、工業場景、硬派氣氛",
+   "rx100m7Compatible": "完全（Creative Style、對比、飽和、銳利、白平衡（Auto 或色溫）、A-B／G-M 整數微調、曝光補償、DRO 都是 RX100 VII 選單內的項目。）",
+   "verified": true
+  },
+  {
+   "name": "Kodak Vision 200T (Asteroid City)",
+   "nameZh": "柯達 Vision 200T（小行星城）",
+   "author": "André Domingues（voxivoid，Recipe Lab）",
+   "sourceUrl": "https://github.com/voxivoid/recipe-lab-sony-pmca/blob/2bdcb82fc8/src/com/voxivoid/recipelab/Recipes.java",
+   "originalModel": "Sony A6000（ILCE-6000）",
+   "type": "photo",
+   "base": "Creative Style: Neutral",
+   "settings": {
+    "Creative Style": "Neutral",
+    "Saturation": "-2",
+    "Contrast": "-3",
+    "Sharpness": "0",
+    "White Balance": "C.Temp./Filter 5000K",
+    "WB Shift": "A2 G3",
+    "Exposure Comp.": "+0.3EV（原始碼存 1/3 級整數，換算後）",
+    "DRO": "Lv3"
+   },
+   "lookZh": "黃綠粉彩、低反差，天空帶青色，像魏斯安德森的色盤",
+   "bestFor": "晴天建築、復古場景、旅行",
+   "rx100m7Compatible": "完全（Creative Style、對比、飽和、銳利、白平衡（Auto 或色溫）、A-B／G-M 整數微調、曝光補償、DRO 都是 RX100 VII 選單內的項目。RX100 VII 有 C.Temp./Filter，但官方未寫色溫範圍，5000K 應在範圍內）",
+   "verified": true
+  },
+  {
+   "name": "Cinestill 800T",
+   "nameZh": "電影 800T",
+   "author": "André Domingues（voxivoid，Recipe Lab）",
+   "sourceUrl": "https://github.com/voxivoid/recipe-lab-sony-pmca/blob/2bdcb82fc8/src/com/voxivoid/recipelab/Recipes.java",
+   "originalModel": "Sony A6000（ILCE-6000）",
+   "type": "photo",
+   "base": "Creative Style: Neutral",
+   "settings": {
+    "Creative Style": "Neutral",
+    "Saturation": "0",
+    "Contrast": "0",
+    "Sharpness": "0",
+    "White Balance": "C.Temp./Filter 3200K",
+    "WB Shift": "M1",
+    "Exposure Comp.": "+0.3EV（原始碼存 1/3 級整數，換算後）",
+    "DRO": "Auto"
+   },
+   "lookZh": "用低色溫把畫面推成偏藍的夜晚電影感，帶一點洋紅",
+   "bestFor": "夜景、霓虹、室內鎢絲燈",
+   "rx100m7Compatible": "完全（Creative Style、對比、飽和、銳利、白平衡（Auto 或色溫）、A-B／G-M 整數微調、曝光補償、DRO 都是 RX100 VII 選單內的項目。不會有真底片的紅色光暈）",
+   "verified": true
+  },
+  {
+   "name": "Kodak Tri-X 400",
+   "nameZh": "柯達 Tri-X 400",
+   "author": "André Domingues（voxivoid，Recipe Lab）",
+   "sourceUrl": "https://github.com/voxivoid/recipe-lab-sony-pmca/blob/2bdcb82fc8/src/com/voxivoid/recipelab/Recipes.java",
+   "originalModel": "Sony A6000（ILCE-6000）",
+   "type": "photo",
+   "base": "Creative Style: Black & White",
+   "settings": {
+    "Creative Style": "Black & White",
+    "Saturation": "0",
+    "Contrast": "+2",
+    "Sharpness": "+2",
+    "White Balance": "Auto",
+    "WB Shift": "0",
+    "Exposure Comp.": "+0.3EV（原始碼存 1/3 級整數，換算後）",
+    "DRO": "Auto"
+   },
+   "lookZh": "反差偏高、邊緣銳利的經典報導黑白",
+   "bestFor": "街拍、紀實、人物特寫",
+   "rx100m7Compatible": "完全（Creative Style、對比、飽和、銳利、白平衡（Auto 或色溫）、A-B／G-M 整數微調、曝光補償、DRO 都是 RX100 VII 選單內的項目。黑白時飽和度本來就不可調，原始碼存 0）",
+   "verified": true
+  },
+  {
+   "name": "GR Positive Film",
+   "nameZh": "GR 正片（仿理光）",
+   "author": "André Domingues（voxivoid，Recipe Lab）",
+   "sourceUrl": "https://github.com/voxivoid/recipe-lab-sony-pmca/blob/2bdcb82fc8/src/com/voxivoid/recipelab/Recipes.java",
+   "originalModel": "Sony A6000（ILCE-6000）",
+   "type": "photo",
+   "base": "Creative Style: Standard",
+   "settings": {
+    "Creative Style": "Standard",
+    "Saturation": "+3",
+    "Contrast": "+2",
+    "Sharpness": "0",
+    "White Balance": "Auto",
+    "WB Shift": "A2",
+    "Exposure Comp.": "-0.3EV（原始碼存 1/3 級整數，換算後）",
+    "DRO": "Auto"
+   },
+   "lookZh": "濃艷偏暖、略暗一點的正片色，色塊很飽",
+   "bestFor": "街頭色彩、招牌、晴天",
+   "rx100m7Compatible": "完全（Creative Style、對比、飽和、銳利、白平衡（Auto 或色溫）、A-B／G-M 整數微調、曝光補償、DRO 都是 RX100 VII 選單內的項目。）",
+   "verified": true
+  },
+  {
+   "name": "Polaroid / Instax",
+   "nameZh": "拍立得",
+   "author": "André Domingues（voxivoid，Recipe Lab）",
+   "sourceUrl": "https://github.com/voxivoid/recipe-lab-sony-pmca/blob/2bdcb82fc8/src/com/voxivoid/recipelab/Recipes.java",
+   "originalModel": "Sony A6000（ILCE-6000）",
+   "type": "photo",
+   "base": "Picture Effect: Retro Photo",
+   "settings": {
+    "Picture Effect": "Retro Photo",
+    "Creative Style": "Standard",
+    "Saturation": "-3",
+    "Contrast": "-2",
+    "Sharpness": "0",
+    "White Balance": "Auto",
+    "WB Shift": "A1 M2",
+    "Exposure Comp.": "+0.3EV（原始碼存 1/3 級整數，換算後）",
+    "DRO": "Auto"
+   },
+   "lookZh": "復古相片濾鏡加上偏洋紅的白平衡，褪色、低反差的即可拍感",
+   "bestFor": "生活小物、聚會、輕鬆隨拍",
+   "rx100m7Compatible": "部分（RX100 VII 有 Retro Photo，但 Picture Effect 開啟時 Creative Style 固定 Standard、DRO 固定 Off，所以飽和／對比與 DRO 這幾項在 RX100 VII 上不會生效；也不能拍 RAW）",
+   "verified": true
+  },
+  {
+   "name": "Kodak Ektar 100 film simulation recipe",
+   "nameZh": "柯達 Ektar 100（PP 版）",
+   "author": "Veres Deni Alex",
+   "sourceUrl": "https://www.veresdenialex.com/8-free-sony-film-simulations",
+   "originalModel": "未指定機型（作者寫「Sony cameras」，同站其他文多用 a6700）",
+   "type": "photo",
+   "base": "PP: Gamma Still / Color Mode S-Gamut3.Cine",
+   "settings": {
+    "Black Level": "+6",
+    "Gamma": "Still",
+    "Black Gamma": "Wide -7",
+    "Knee": "Manual 75% +4",
+    "Color Mode": "S-Gamut3.Cine",
+    "Saturation": "+25",
+    "Color Phase": "+2",
+    "Color Depth": "R -3, G +7, B +5, C +5, M +5, Y +1",
+    "Detail": "0",
+    "Detail Adjust": "Mode Manual, V/H Balance +2, B/W Balance Type3, Limit 7, Crispening 7, H-Light detail 4",
+    "White Balance": "C.Temp./Filter 5000K",
+    "WB Shift": "A2-M1"
+   },
+   "lookZh": "高飽和、綠與藍特別濃，暗部被壓深的鮮明風景色",
+   "bestFor": "風景、藍天、旅行",
+   "rx100m7Compatible": "完全（Still gamma、S-Gamut3.Cine 都在 RX100 VII 清單內。PP 在 RX100 VII 也套用到靜態影像；作者寫的 Kelvin 對應 White Balance: C.Temp./Filter、Color Filter 對應白平衡 A-B／G-M 微調。作者沒指定 PP 編號，任一組 PP 改成這些值即可。）",
+   "verified": true
+  },
+  {
+   "name": "Ev Pro+ film recipe",
+   "nameZh": "Ev Pro+",
+   "author": "Veres Deni Alex",
+   "sourceUrl": "https://www.veresdenialex.com/8-free-sony-film-simulations",
+   "originalModel": "未指定機型（作者寫「Sony cameras」，同站其他文多用 a6700）",
+   "type": "photo",
+   "base": "PP: Gamma Cine1 / Color Mode S-Gamut3/S-Gamut",
+   "settings": {
+    "Black Level": "-10",
+    "Gamma": "Cine1",
+    "Black Gamma": "Middle +7",
+    "Knee": "Auto",
+    "Color Mode": "S-Gamut3/S-Gamut",
+    "Saturation": "+25",
+    "Color Phase": "+5",
+    "Color Depth": "R -3, G +4, B +3, C +3, M -2, Y +2",
+    "Detail": "0",
+    "Detail Adjust": "Mode Manual, V/H Balance +2, B/W Balance Type3, Limit 7, Crispening 7, H-Light detail 4",
+    "White Balance": "C.Temp./Filter 4300K",
+    "WB Shift": "A3.5"
+   },
+   "lookZh": "Cine1 的柔和高光配上偏暖的色調，暗部提亮",
+   "bestFor": "人像、室內暖光、黃昏",
+   "rx100m7Compatible": "完全（Cine1、S-Gamut3、S-Gamut 都有；原文色彩模式寫成「S-Gamut3/S-Gamut」二選一。Cine1 搭 Knee Auto 在說明指南中屬於 Knee 無效，原作者機種同理。PP 在 RX100 VII 也套用到靜態影像；作者寫的 Kelvin 對應 White Balance: C.Temp./Filter、Color Filter 對應白平衡 A-B／G-M 微調。作者沒指定 PP 編號，任一組 PP 改成這些值即可。）",
+   "verified": true
+  },
+  {
+   "name": "Fuji 400H film simulation",
+   "nameZh": "富士 400H（PP 版）",
+   "author": "Veres Deni Alex",
+   "sourceUrl": "https://www.veresdenialex.com/8-free-sony-film-simulations",
+   "originalModel": "未指定機型（作者寫「Sony cameras」，同站其他文多用 a6700）",
+   "type": "photo",
+   "base": "PP: Gamma Movie / Color Mode Still",
+   "settings": {
+    "Black Level": "0",
+    "Gamma": "Movie",
+    "Black Gamma": "Wide +7",
+    "Knee": "Manual 80% +4",
+    "Color Mode": "Still",
+    "Saturation": "+11",
+    "Color Phase": "-3",
+    "Color Depth": "R -4, G +7, B -3, C -3, M -5, Y +-3",
+    "Detail": "0",
+    "Detail Adjust": "Mode Manual, V/H Balance +2, B/W Balance Type3, Limit 7, Crispening 7, H-Light detail 4",
+    "White Balance": "C.Temp./Filter 3500K",
+    "WB Shift": "A7-M0.25"
+   },
+   "lookZh": "低色溫加大量琥珀偏移，膚色粉嫩、綠色清淡的柔和負片調",
+   "bestFor": "婚禮、人像、花草",
+   "rx100m7Compatible": "完全（Movie gamma／Still 色彩模式都有。原文 Y 寫「+-3」，疑為筆誤，照錄。PP 在 RX100 VII 也套用到靜態影像；作者寫的 Kelvin 對應 White Balance: C.Temp./Filter、Color Filter 對應白平衡 A-B／G-M 微調。作者沒指定 PP 編號，任一組 PP 改成這些值即可。）",
+   "verified": true
+  },
+  {
+   "name": "Kodak Portra 800 film simulation",
+   "nameZh": "柯達 Portra 800（PP 版）",
+   "author": "Veres Deni Alex",
+   "sourceUrl": "https://www.veresdenialex.com/8-free-sony-film-simulations",
+   "originalModel": "未指定機型（作者寫「Sony cameras」，同站其他文多用 a6700）",
+   "type": "photo",
+   "base": "PP: Gamma S-Log2/S-Log3 / Color Mode Still",
+   "settings": {
+    "Black Level": "-15",
+    "Gamma": "S-Log2/S-Log3",
+    "Black Gamma": "Middle -7",
+    "Knee": "Manual 75% +5",
+    "Color Mode": "Still",
+    "Saturation": "+20 or +32",
+    "Color Phase": "+3",
+    "Color Depth": "R +3, G +5, B +5, C +7, M +7, Y -3",
+    "Detail": "0",
+    "Detail Adjust": "Mode Manual, V/H Balance +2, B/W Balance Type3, Limit 7, Crispening 7, H-Light detail 4",
+    "White Balance": "C.Temp./Filter 4500K",
+    "WB Shift": "A7-M1"
+   },
+   "lookZh": "用 Log 曲線做出低反差、褪色感強的暖調負片",
+   "bestFor": "陰天、室內、想要很淡的底片味時",
+   "rx100m7Compatible": "部分（RX100 VII 有 S-Log2／S-Log3，但說明指南寫明 S-Log2／S-Log3 時 Black Level 停用，-15 不會生效；Knee Slope +5 時 Knee 也會停用；S-Log 的最低 ISO 較高。原文要求關閉 Gamma Disp. Assist，飽和度原文給兩個選項。PP 在 RX100 VII 也套用到靜態影像；作者寫的 Kelvin 對應 White Balance: C.Temp./Filter、Color Filter 對應白平衡 A-B／G-M 微調。作者沒指定 PP 編號，任一組 PP 改成這些值即可。）",
+   "verified": true
+  },
+  {
+   "name": "Kodak Gold film simulation",
+   "nameZh": "柯達金（PP 版）",
+   "author": "Veres Deni Alex",
+   "sourceUrl": "https://www.veresdenialex.com/8-free-sony-film-simulations",
+   "originalModel": "未指定機型（作者寫「Sony cameras」，同站其他文多用 a6700）",
+   "type": "photo",
+   "base": "PP: Gamma Movie / Color Mode S-Gamut3/S-Gamut",
+   "settings": {
+    "Black Level": "-5",
+    "Gamma": "Movie",
+    "Black Gamma": "Wide+7",
+    "Knee": "Manual 75% +4",
+    "Color Mode": "S-Gamut3/S-Gamut",
+    "Saturation": "+32",
+    "Color Phase": "+6",
+    "Color Depth": "R -4, G 0, B +5, C +5, M +5, Y +4",
+    "Detail": "0",
+    "Detail Adjust": "Mode Manual, V/H Balance +2, B/W Balance Type3, Limit 7, Crispening 7, H-Light detail 4",
+    "White Balance": "C.Temp./Filter 8000K",
+    "WB Shift": "B3-M1.75"
+   },
+   "lookZh": "高色溫配藍洋紅偏移，飽和拉滿，黃色濃郁的懷舊金黃調",
+   "bestFor": "夏日、街景、懷舊人像",
+   "rx100m7Compatible": "完全（Movie gamma、S-Gamut3／S-Gamut 都有；8000K 是否在 RX100 VII 色溫範圍內官方未寫。PP 在 RX100 VII 也套用到靜態影像；作者寫的 Kelvin 對應 White Balance: C.Temp./Filter、Color Filter 對應白平衡 A-B／G-M 微調。作者沒指定 PP 編號，任一組 PP 改成這些值即可。）",
+   "verified": true
+  },
+  {
+   "name": "Cinestill 50D film simulation",
+   "nameZh": "電影 50D（PP 版）",
+   "author": "Veres Deni Alex",
+   "sourceUrl": "https://www.veresdenialex.com/8-free-sony-film-simulations",
+   "originalModel": "未指定機型（作者寫「Sony cameras」，同站其他文多用 a6700）",
+   "type": "photo",
+   "base": "PP: Gamma Still / Color Mode Still",
+   "settings": {
+    "Black Level": "0",
+    "Gamma": "Still",
+    "Black Gamma": "Middle + 7",
+    "Knee": "Manual 75% +4",
+    "Color Mode": "Still",
+    "Saturation": "+10",
+    "Color Phase": "-3",
+    "Color Depth": "R +4, G +5, B -2, C +3, M +5, Y +2",
+    "Detail": "0",
+    "Detail Adjust": "Mode Manual, V/H Balance +2, B/W Balance Type3, Limit 7, Crispening 7, H-Light detail 4",
+    "White Balance": "C.Temp./Filter 7400K",
+    "WB Shift": "B4-M1.5"
+   },
+   "lookZh": "乾淨偏冷、帶一點洋紅的日光電影底片感，暗部提亮",
+   "bestFor": "晴天城市、建築、海邊",
+   "rx100m7Compatible": "完全（Still gamma／Still 色彩模式都有。PP 在 RX100 VII 也套用到靜態影像；作者寫的 Kelvin 對應 White Balance: C.Temp./Filter、Color Filter 對應白平衡 A-B／G-M 微調。作者沒指定 PP 編號，任一組 PP 改成這些值即可。）",
+   "verified": true
+  },
+  {
+   "name": "Vektro 100 film recipe",
+   "nameZh": "Vektro 100",
+   "author": "Veres Deni Alex",
+   "sourceUrl": "https://www.veresdenialex.com/8-free-sony-film-simulations",
+   "originalModel": "未指定機型（作者寫「Sony cameras」，同站其他文多用 a6700）",
+   "type": "photo",
+   "base": "PP: Gamma Still / Color Mode S-Gamut3",
+   "settings": {
+    "Black Level": "-15",
+    "Gamma": "Still",
+    "Black Gamma": "Wide -7",
+    "Knee": "Manual 92.5% +5",
+    "Color Mode": "S-Gamut3",
+    "Saturation": "+27",
+    "Color Phase": "+6",
+    "Color Depth": "R +5, G +7, B +5, C +5, M +2, Y 0",
+    "Detail": "0",
+    "Detail Adjust": "Mode Manual, V/H Balance +2, B/W Balance Type3, Limit 7, Crispening 7, H-Light detail 4",
+    "White Balance": "C.Temp./Filter 4000K",
+    "WB Shift": "A5-M0.5"
+   },
+   "lookZh": "暗部壓得很深、色彩濃厚的高反差創作調",
+   "bestFor": "強光街拍、色塊鮮明的場景",
+   "rx100m7Compatible": "完全，但有一點要注意（參數都在範圍內；Knee Slope +5 依說明指南會讓 Knee 停用；92.5% 這個點位在 RX100 VII 能不能選到要實機確認。PP 在 RX100 VII 也套用到靜態影像；作者寫的 Kelvin 對應 White Balance: C.Temp./Filter、Color Filter 對應白平衡 A-B／G-M 微調。作者沒指定 PP 編號，任一組 PP 改成這些值即可。）",
+   "verified": true
+  },
+  {
+   "name": "Reggie's Portra 400 (alternative for older Sony cameras without S-Cinetone)",
+   "nameZh": "瑞吉 Portra 400（無 S-Cinetone 機種版）",
+   "author": "Veres Deni Alex（改編自 Reggie Ballesteros 的富士配方）",
+   "sourceUrl": "https://www.veresdenialex.com/post/reggies-portra-recipe-on-sony-cameras",
+   "originalModel": "Sony a6700 測試；這一版是作者給沒有 S-Cinetone 的舊機用的",
+   "type": "photo",
+   "base": "PP: Gamma Movie / Color Mode Still",
+   "settings": {
+    "Black Level": "-5",
+    "Gamma": "Movie",
+    "Black Gamma": "Wide -7",
+    "Knee": "95% +2",
+    "Color Mode": "Still",
+    "Saturation": "-1",
+    "Color Phase": "+1",
+    "Color Depth": "R 0, G +7, B +2, C +4, M +3, Y +2",
+    "Detail": "0",
+    "Detail Adjust": "Manual, V/H Balance 0, B/W Balance Type3, Limit 0, Crispening 7, Hi-Light Detail 4",
+    "White Balance": "AWB:White（RX100 VII 對應 White Balance: Auto＋Priority Set in AWB: White）",
+    "WB Shift": "A2"
+   },
+   "lookZh": "中性、飽和偏低、沒有強烈偏色的萬用負片調",
+   "bestFor": "街拍、旅行、人像、夜間隨拍都可",
+   "rx100m7Compatible": "完全（Movie gamma、Still 色彩模式、Priority Set in AWB: White 都有；Knee 原文只寫「95% +2」，沒寫 Manual，但 Point／Slope 屬於 Manual 設定。作者說黃色會比 S-Cinetone 版更飽和）",
+   "verified": true
+  },
+  {
+   "name": "The Universal S-Cinetone Recipe",
+   "nameZh": "通用 S-Cinetone 仿製配方",
+   "author": "Veres Deni Alex",
+   "sourceUrl": "https://www.veresdenialex.com/post/replicating-s-cinetone-in-older-sony-cameras",
+   "originalModel": "通用版（作者另有 a7III、RX100 VI 專用版）",
+   "type": "video",
+   "base": "PP: Gamma Cine1-4 (or Movie) / Color Mode Still",
+   "settings": {
+    "Black Level": "-1",
+    "Gamma": "Cine1-4 (or Movie if unavailable)",
+    "Black Gamma": "Middle -7",
+    "Knee": "Manual 80% +4",
+    "Color Mode": "Still",
+    "Saturation": "0",
+    "Color Phase": "-2",
+    "Color Depth": "R 0, G +4, B -1, C -3, M +3, Y 0"
+   },
+   "lookZh": "模仿 Sony 新機 S-Cinetone 的柔和膚色與電影感中間調",
+   "bestFor": "Vlog、訪談、人物影片",
+   "rx100m7Compatible": "部分（RX100 VII 沒有 Cine3／Cine4，只能選 Cine1 或 Cine2，作者說 Cine4 最接近、Cine1 次之；原文沒有指定 Detail 與白平衡，作者另說要依各機偏色調整白平衡）",
+   "verified": true
+  },
+  {
+   "name": "High-Contrast Monochrome Picture Profile Recipe For Sony JPGS",
+   "nameZh": "高反差黑白 JPEG 配方",
+   "author": "Jamie Furlong",
+   "sourceUrl": "https://jamiefurlong.com/high-contrast-monochrome-picture-profile-recipe-for-sony-jpgs/",
+   "originalModel": "未寫機型（原文只寫 Sony 全片幅機）",
+   "type": "photo",
+   "base": "PP: Gamma Still / Color Mode B&W",
+   "settings": {
+    "Black Level": "-15",
+    "Gamma": "Stills",
+    "Black Gamma": "Range: Narrow, Level: -7",
+    "Knee": "Mode: Manual, Point: 105%, Slope: +5",
+    "Color Mode": "B&W",
+    "Saturation": "N/A",
+    "Color Phase": "-1",
+    "Color Depth": "All channels set to 0",
+    "Detail": "Adjust: Manual, Level: +5, V/H Balance: 0, B/W Balance: Type 3, Limit: 4, Crispening: +6, Hi-Light Detail: +2",
+    "White Balance": "未列入配方（作者說平常固定用 daylight，尚未測試白平衡影響）"
+   },
+   "lookZh": "黑位壓到底、高光不壓縮，銳利度拉高，出來是硬調、顆粒感重的黑白。",
+   "bestFor": "晴天街拍、建築幾何、高 ISO 夜間黑白",
+   "rx100m7Compatible": "完全（每項都在 RX100 VII 範圍內：Knee 手動點 75–105%、Crispning 0–7、Hi-Light Detail 0–4、Limit 0–7；注意 RX100 VII 說明書寫 Slope +5 時 Knee 等於停用，與作者要的硬切高光一致；開 PP 時 Creative Style 固定 Standard、DRO 固定 Off）",
+   "verified": true,
+   "foundBy": "antigravity"
+  },
+  {
+   "name": "Kodak Portra400 mimic",
+   "nameZh": "仿柯達 Portra 400",
+   "type": "photo",
+   "base": "PP: Gamma Cine2 / Color Mode Still",
+   "settings": {
+    "Black Level": "+10",
+    "Gamma": "Cine2",
+    "Black Gamma Range": "Middle",
+    "Black Gamma Level": "+2",
+    "Knee Mode": "Auto",
+    "Knee Max Point": "100%",
+    "Knee Sensitivity": "Mid",
+    "Color Mode": "Still",
+    "Saturation": "+32",
+    "Color Phase": "+5",
+    "Color Depth R": "-2",
+    "Color Depth G": "+6",
+    "Color Depth B": "+6",
+    "Color Depth C": "+2",
+    "Color Depth M": "+5",
+    "Color Depth Y": "-3",
+    "Detail Level": "-7",
+    "Detail Adjust Mode": "Manual",
+    "V/H Balance": "0",
+    "B/W Balance": "Type5",
+    "Limit": "7",
+    "Crispening": "7",
+    "Hi-Light Detail": "0",
+    "White Balance": "5300K",
+    "WB Shift": "A1 G4.5"
+   },
+   "lookZh": "飽和拉滿、偏暖的人像底片味，暗部稍微墊高",
+   "bestFor": "人像、日常",
+   "author": "Ali Radwani（自用 RX100 VII）",
+   "sourceUrl": "https://ahradwani.com/sony-picture-profiles/",
+   "originalModel": "RX100 VII",
+   "rx100m7Compatible": "完全（作者本人用 RX100 VII；作者標示仍在調整）",
+   "verified": true,
+   "foundBy": "antigravity"
+  },
+  {
+   "name": "ilford | Black and White",
+   "nameZh": "Ilford 黑白",
+   "type": "photo",
+   "base": "PP: Gamma Still / Color Mode Black and White",
+   "settings": {
+    "Black Level": "-15",
+    "Gamma": "Still",
+    "Black Gamma Range": "Wide",
+    "Black Gamma Level": "-7",
+    "Knee Mode": "Auto",
+    "Knee Max Point": "100%",
+    "Knee Sensitivity": "Mid",
+    "Knee Manual Point": "100%",
+    "Knee Manual Slope": "+5",
+    "Color Mode": "Black and White",
+    "Saturation": "-17",
+    "Color Phase": "-2",
+    "Color Depth R": "0",
+    "Color Depth G": "0",
+    "Color Depth B": "0",
+    "Color Depth C": "0",
+    "Color Depth M": "0",
+    "Color Depth Y": "0",
+    "Detail Level": "-7",
+    "Detail Adjust Mode": "Auto",
+    "V/H Balance": "-2",
+    "B/W Balance": "Type3",
+    "Limit": "7",
+    "Crispening": "0",
+    "Hi-Light Detail": "0"
+   },
+   "lookZh": "暗部壓得很深、反差強的黑白，細節偏柔",
+   "bestFor": "街拍、陰天",
+   "author": "Ali Radwani（自用 RX100 VII）",
+   "sourceUrl": "https://ahradwani.com/sony-picture-profiles/",
+   "originalModel": "RX100 VII",
+   "rx100m7Compatible": "完全（作者本人用 RX100 VII；作者標示可用）",
+   "verified": true,
+   "foundBy": "antigravity"
+  },
+  {
+   "name": "Black and White – Creative Style – More Shadows",
+   "nameZh": "黑白（加深陰影）",
+   "type": "photo",
+   "base": "Creative Style: Black & White",
+   "settings": {
+    "Creative Style": "Black & White",
+    "Contrast": "+3",
+    "Sharpness": "+5"
+   },
+   "lookZh": "對比拉高、暗部更重的黑白，邊緣銳利",
+   "bestFor": "街拍、建築",
+   "author": "Ali Radwani（自用 RX100 VII）",
+   "sourceUrl": "https://ahradwani.com/sony-picture-profiles/",
+   "originalModel": "RX100 VII",
+   "rx100m7Compatible": "完全（作者本人用 RX100 VII；作者標示效果最好；原文銳利度寫 +5，若相機最高只到 +3 就設最大值）",
+   "verified": true,
+   "foundBy": "claude"
+  },
+  {
+   "name": "Classic Chrome (Creative Style)",
+   "nameZh": "仿富士 Classic Chrome",
+   "type": "photo",
+   "base": "Creative Style: Neutral",
+   "settings": {
+    "Creative Style": "Neutral",
+    "Contrast": "+2",
+    "Saturation": "-2",
+    "Sharpness": "+3",
+    "White Balance": "5600K",
+    "WB Shift": "B1 G-M 0"
+   },
+   "lookZh": "低飽和、略冷、反差偏硬的紀實色調",
+   "bestFor": "街拍、旅行紀錄",
+   "author": "Ali Radwani（自用 RX100 VII）",
+   "sourceUrl": "https://ahradwani.com/sony-picture-profiles/",
+   "originalModel": "RX100 VII",
+   "rx100m7Compatible": "完全（作者本人用 RX100 VII；作者標示仍在調整）",
+   "verified": true,
+   "foundBy": "claude"
+  },
+  {
+   "name": "CineStill",
+   "nameZh": "仿 CineStill",
+   "type": "photo",
+   "base": "PP: Gamma Still / Color Mode S-Gamut",
+   "settings": {
+    "Black Level": "-15",
+    "Gamma": "Still",
+    "Black Gamma Range": "Wide",
+    "Black Gamma Level": "-7",
+    "Knee Mode": "Auto",
+    "Knee Max Point": "100%",
+    "Knee Sensitivity": "Mid",
+    "Color Mode": "S-Gamut",
+    "Saturation": "+10",
+    "Color Phase": "-3",
+    "Color Depth R": "0",
+    "Color Depth G": "+7",
+    "Color Depth B": "+7",
+    "Color Depth C": "0",
+    "Color Depth M": "-7",
+    "Color Depth Y": "+7",
+    "Detail Level": "+2",
+    "Detail Adjust Mode": "Auto",
+    "V/H Balance": "0",
+    "B/W Balance": "Type3",
+    "Limit": "+7",
+    "Crispening": "0",
+    "Hi-Light Detail": "+2",
+    "White Balance": "3500K",
+    "WB Shift": "B4 M1"
+   },
+   "lookZh": "偏冷偏青的夜景電影底片感，暗部很深",
+   "bestFor": "夜景、城市燈光",
+   "author": "Ali Radwani（自用 RX100 VII）",
+   "sourceUrl": "https://ahradwani.com/sony-picture-profiles/",
+   "originalModel": "RX100 VII",
+   "rx100m7Compatible": "完全（作者本人用 RX100 VII；作者標示仍在調整）",
+   "verified": true,
+   "foundBy": "claude"
+  },
+  {
+   "name": "Kids Indoor",
+   "nameZh": "室內小孩",
+   "type": "photo",
+   "base": "PP: Gamma Cine2 / Color Mode Cinema",
+   "settings": {
+    "Black Level": "+15",
+    "Gamma": "Cine2",
+    "Black Gamma Range": "Wide",
+    "Black Gamma Level": "+7",
+    "Knee Mode": "Manual",
+    "Knee Manual Point": "100%",
+    "Knee Manual Slope": "+2",
+    "Color Mode": "Cinema",
+    "Saturation": "+15",
+    "Color Phase": "+5",
+    "Color Depth R": "+2",
+    "Color Depth G": "+2",
+    "Color Depth B": "+2",
+    "Color Depth C": "+1",
+    "Color Depth M": "+4",
+    "Color Depth Y": "+3",
+    "Detail Level": "+7",
+    "Detail Adjust Mode": "Auto",
+    "V/H Balance": "+1",
+    "B/W Balance": "Type5",
+    "Limit": "5",
+    "Crispening": "0",
+    "Hi-Light Detail": "4",
+    "White Balance": "Fluor. +2 / Daylight",
+    "WB Shift": "B4 M2"
+   },
+   "lookZh": "暗部提亮、膚色偏暖的室內生活照",
+   "bestFor": "室內、家庭生活",
+   "author": "Ali Radwani（自用 RX100 VII）",
+   "sourceUrl": "https://ahradwani.com/sony-picture-profiles/",
+   "originalModel": "RX100 VII",
+   "rx100m7Compatible": "完全（作者本人用 RX100 VII；作者標示仍在調整）",
+   "verified": true,
+   "foundBy": "claude"
+  }
+ ],
+ "gaps": [
+  "Creative Style 的對比／飽和度／銳利度數值範圍：RX100 VII 說明指南（英／日）內文都沒寫數字，只有螢幕圖示範例顯示「+3 +3 +3」；-3 ~ +3 是依 Sony 各機一貫做法與 Recipe Lab 原始碼註解（A6000 選單範圍 -3..+3）推定，最好實機確認。2026-10-15 已下載說明指南 PDF 全文再查一次，Creative Style 章節（p.188）只說明各項作用，確實沒有數值範圍，建議實機確認。",
+  "C.Temp./Filter 的色溫上下限：RX100 VII 說明指南與官方規格頁都沒寫；第三方比較站的 2500K–9900K 疑似屬於 RX100 III 欄位，未採用。2026-10-15 已用說明指南 PDF 全文搜尋，C.Temp./Filter 只寫「依光源調整色調」，沒有 K 值範圍。",
+  "Picture Effect 子選項（Toy Camera 色調、Partial Color 顏色、Soft High-key 色調、Posterization 彩色／黑白、Miniature 範圍、Illustration 強度等）：說明指南只說可用左右鍵細調，沒有列名稱；Recipe Lab 原始碼（A6000）列出 Toy normal/cool/warm/green/magenta、Partial red/green/blue/yellow、Soft High-key blue/pink/green、Posterization color/b&w，RX100 VII 未查證",
+  "官方規格頁寫動態影像可用 7 種 Picture Effect，說明指南只列出 6 種不能用於影片；可用於影片的 7 種是由兩者推得，未逐一核對",
+  "PP1–PP7、PP10 的預設色彩模式與其他參數預設值：RX100 VII 說明指南只寫各組用哪條 gamma（PP4 連 gamma 都沒寫），未列完整預設表",
+  "Knee Manual Point 的調整級距（例如 92.5% 能否選到）說明指南未寫",
+  "DRO 能否用於 RAW：說明指南沒有提（Auto HDR 有寫明不能用 RAW）",
+  "Fuji X Weekly（Ritchie Roesch）找不到 Sony 配方；Reddit（r/SonyAlpha、r/RX100）與 DPReview 對本工具回應被擋（403／無回應），社群貼文沒有收錄",
+  "影片用 Picture Profile 配方：找到的完整 PP 配方幾乎都用 Cine4、Cine3 或 S-Cinetone（RX100 VII 沒有），只收 1 組通用 S-Cinetone 版；Veres Deni Alex 的 RX100 VI 專用 S-Cinetone 版原文 Color Depth Y 空白、未寫 Detail，依規則不收",
+  "排除未收：Senova Light（Cine3）、Bright Kodak recipe（Cine4，9900K B5-G0.25）、Reggie's Portra S-Cinetone 版（S-Cinetone 色彩模式）—— RX100 VII 都沒有這些選項",
+  "Veres Deni Alex 的多數配方（Kodak Color Plus 200、Kodachrome 64、Asteroid City、Portra 800 對比文等）放在付費 PDF，頁面沒有數值，未收",
+  "Recipe Lab 的風格代碼 4–12（Portrait、Landscape、Clear、Deep、Light 等）作者說是依選單順序推測；以 Portrait 為底的配方實際套用的風格可能不同",
+  "sonyfilmsimulations.com 無法解析網域；該站是 Creative Look 配方，本來也不適用 RX100 VII",
+  "RX100 VII 不支援 PlayMemories Camera Apps（Recipe Lab 這類機內 App 不能裝），配方只能手動輸入；出處：Recipe Lab README 相容性段列出 RX100 VA～VII 不能安裝（github.com/voxivoid/recipe-lab-sony-pmca）。"
+ ]
+}

@@ -1,0 +1,338 @@
+<title>手邊相機配方本</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<style>
+/* 版面：暗房筆記本。上方相機分頁＝底片片邊，每組配方是一張「設定卡」，數值用等寬字對齊成相機選單讀數。 */
+:root {
+  --bg: #edf0ee;
+  --paper: #f8faf9;
+  --fg: #1b2120;
+  --muted: #5a6562;
+  --line: #c8d0cc;
+  --accent: #b42a1f;      /* 暗房安全燈紅 */
+  --accent-soft: #f3dcd8;
+  --rebate: #2a2f2d;      /* 片邊底色 */
+  --rebate-fg: #e9c46a;   /* 片邊印字的琥珀色 */
+  --ok: #2f6b45;
+  --warn: #8a5a00;
+  --font-display: "Barlow Condensed", "Noto Sans TC", "PingFang TC", sans-serif;
+  --font-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121514; --paper: #1a1e1d; --fg: #e5eae8; --muted: #9aa5a1; --line: #323a37;
+    --accent: #f0705f; --accent-soft: #3a1f1b; --rebate: #0b0d0c; --rebate-fg: #e9c46a;
+    --ok: #7cc79a; --warn: #e0b45a; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121514; --paper: #1a1e1d; --fg: #e5eae8; --muted: #9aa5a1; --line: #323a37;
+  --accent: #f0705f; --accent-soft: #3a1f1b; --rebate: #0b0d0c; --rebate-fg: #e9c46a;
+  --ok: #7cc79a; --warn: #e0b45a; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 15px; line-height: 1.65; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: 16px; padding-block: 28px 64px; }
+a { color: var(--accent); text-underline-offset: 2px; }
+code { font-family: var(--font-mono); font-size: .88em; background: var(--accent-soft); padding: 0 .3em; border-radius: 3px; overflow-wrap: anywhere; }
+h1, h2, h3 { text-wrap: balance; }
+
+header.top { display: grid; gap: 6px; margin-bottom: 20px; }
+.eyebrow { font-family: var(--font-display); letter-spacing: .14em; text-transform: uppercase; font-size: 13px; color: var(--muted); }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(30px, 5vw, 44px); line-height: 1.05; margin: 0; }
+h1 .zh { font-family: var(--font-body); font-weight: 700; }
+.lede { color: var(--muted); max-width: 68ch; margin: 0; }
+
+/* 片邊分頁 */
+nav.rebate { background: var(--rebate); border-radius: 4px; padding: 14px 10px 10px; position: relative; display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 22px; }
+nav.rebate::before, nav.rebate::after { content: ""; position: absolute; left: 10px; right: 10px; height: 5px;
+  background: repeating-linear-gradient(90deg, var(--bg) 0 9px, transparent 9px 22px); opacity: .55; }
+nav.rebate::before { top: 4px; }
+nav.rebate::after { bottom: 3px; }
+nav.rebate button { appearance: none; border: 0; background: transparent; color: var(--rebate-fg); opacity: .62; cursor: pointer;
+  font-family: var(--font-display); font-weight: 600; font-size: 18px; letter-spacing: .06em; padding: 6px 14px 8px; border-radius: 3px; }
+nav.rebate button .fr { font-family: var(--font-mono); font-size: 11px; margin-right: 6px; opacity: .8; }
+nav.rebate button[aria-selected="true"] { opacity: 1; background: rgba(233,196,106,.12); }
+nav.rebate button:focus-visible { outline: 2px solid var(--rebate-fg); outline-offset: 1px; }
+
+/* 相機面板 */
+.cam-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 24px; align-items: end; margin-bottom: 14px; }
+.cam-head h2 { font-family: var(--font-display); font-size: 30px; margin: 0; line-height: 1.1; }
+.cam-head p { margin: 0; color: var(--muted); grid-column: 1 / -1; max-width: 75ch; }
+.count { font-family: var(--font-mono); font-size: 13px; color: var(--muted); }
+
+details.spec { background: var(--paper); border: 1px solid var(--line); border-radius: 4px; margin-bottom: 18px; }
+details.spec > summary { cursor: pointer; padding: 10px 14px; font-weight: 700; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+details.spec > summary::after { content: "展開"; font-weight: 400; color: var(--muted); font-size: 13px; }
+details.spec[open] > summary::after { content: "收合"; }
+details.spec .spec-body { padding: 0 14px 14px; display: grid; gap: 14px; }
+.spec h4 { margin: 0 0 6px; font-size: 13px; letter-spacing: .08em; color: var(--muted); font-weight: 500; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 13px; border: 1px solid var(--line); border-radius: 999px; padding: 1px 10px; background: var(--bg); }
+.tbl-wrap { overflow-x: auto; }
+table.params { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+table.params th, table.params td { text-align: left; padding: 5px 10px 5px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+table.params th { font-weight: 500; color: var(--muted); font-size: 12px; letter-spacing: .06em; }
+table.params td.mono { font-family: var(--font-mono); min-width: 9ch; }
+.kv { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 4px 14px; font-size: 13.5px; }
+.kv dt { color: var(--muted); }
+.kv dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.srcs { font-size: 12.5px; color: var(--muted); overflow-wrap: anywhere; }
+
+/* 篩選列 */
+.filters { display: flex; flex-wrap: wrap; gap: 8px 10px; align-items: center; margin-bottom: 14px; }
+.filters input[type="search"] { flex: 1 1 220px; min-width: 0; font: inherit; padding: 7px 10px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); color: var(--fg); }
+.filters select { font: inherit; padding: 7px 8px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); color: var(--fg); max-width: 100%; }
+.filters input:focus-visible, .filters select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+/* 配方卡 */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 14px; }
+article.card { background: var(--paper); border: 1px solid var(--line); border-radius: 4px; display: flex; flex-direction: column; min-width: 0; }
+.card-top { padding: 12px 14px 8px; border-bottom: 1px dashed var(--line); display: grid; gap: 2px; }
+.card-top .frame { font-family: var(--font-mono); font-size: 11px; color: var(--accent); letter-spacing: .08em; display: flex; justify-content: space-between; gap: 8px; }
+.card-top h3 { font-family: var(--font-display); font-size: 22px; font-weight: 600; margin: 0; line-height: 1.15; overflow-wrap: anywhere; }
+.card-top .zh { font-size: 14px; font-weight: 700; }
+.card-top .look { margin: 4px 0 0; font-size: 13.5px; color: var(--muted); }
+dl.readout { margin: 0; padding: 10px 14px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1px 12px; font-size: 13px; flex: 1; align-content: start; }
+dl.readout dt { color: var(--muted); overflow-wrap: anywhere; }
+dl.readout dd { margin: 0; font-family: var(--font-mono); text-align: right; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; max-width: 22ch; }
+dl.readout dt.base, dl.readout dd.base { font-weight: 700; color: var(--fg); }
+.card-foot { padding: 8px 14px 12px; display: grid; gap: 6px; font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--line); }
+.card-foot .row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 12px; align-items: center; }
+.badge { font-size: 11.5px; border-radius: 3px; padding: 0 6px; border: 1px solid currentColor; white-space: nowrap; }
+.badge.ok { color: var(--ok); }
+.badge.warn { color: var(--warn); }
+button.copy { appearance: none; font: inherit; font-size: 12.5px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); padding: 3px 10px; border-radius: 3px; cursor: pointer; }
+button.copy:hover { border-color: var(--accent); }
+button.copy:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.empty { color: var(--muted); padding: 24px 0; }
+.gaps { margin-top: 22px; font-size: 13px; color: var(--muted); }
+.gaps ul { margin: 6px 0 0; padding-left: 1.2em; }
+
+/* 刷機清單 */
+.ck-intro { display: grid; gap: 10px; margin-bottom: 16px; max-width: 80ch; }
+.ck-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; font-family: var(--font-mono); font-size: 13px; color: var(--muted); }
+.ck-meter { flex: 1 1 200px; height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; }
+.ck-meter span { display: block; height: 100%; width: 0; background: var(--accent); transition: width .2s; }
+button.reset { appearance: none; font: inherit; font-size: 12.5px; border: 1px solid var(--line); background: var(--paper); color: var(--fg); padding: 3px 10px; border-radius: 3px; cursor: pointer; }
+.ck-body { display: grid; gap: 14px; max-width: 860px; }
+section.ck-sec { background: var(--paper); border: 1px solid var(--line); border-radius: 4px; padding: 4px 16px 12px; }
+section.ck-sec h3 { font-size: 17px; margin: 10px 0 6px; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.ck-num { font-family: var(--font-display); font-size: 24px; color: var(--accent); min-width: 1.2em; }
+.ck-prog { margin-left: auto; font-family: var(--font-mono); font-size: 12px; color: var(--muted); font-weight: 400; }
+.ck-list, .plain { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.plain { padding-left: 1.1em; list-style: disc; }
+.ck-item { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 2px 8px; align-items: start; }
+.ck-item input { margin: 5px 0 0; width: 16px; height: 16px; accent-color: var(--accent); }
+.ck-item label { cursor: pointer; }
+.ck-item input:checked + label { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--line); }
+.ck-sub { grid-column: 2; font-size: 13.5px; color: var(--muted); }
+pre.cmd { grid-column: 2; margin: 4px 0; background: var(--rebate); color: #e8ece9; font-family: var(--font-mono); font-size: 12.5px; padding: 8px 10px; border-radius: 3px; overflow-x: auto; min-width: 0; }
+pre.cmd code { background: none; padding: 0; color: inherit; }
+.plain pre.cmd { margin-left: 0; }
+p.note { font-size: 13px; color: var(--muted); margin: 0 0 4px; }
+section.ck-sec p { margin: 6px 0; }
+.tag-generic { font-size: 11px; border: 1px solid var(--line); color: var(--muted); border-radius: 3px; padding: 0 5px; margin-left: 4px; white-space: nowrap; }
+
+footer { margin-top: 40px; font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 12px; display: grid; gap: 4px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="eyebrow">GR IV · GR IIIx · RX100 VII</div>
+    <h1><span class="zh">手邊相機配方本</span></h1>
+    <p class="lede">三台相機在機身上直接可以設定的畫面配方。每組都附原作者與出處，數值照原文；先看「相機可調參數」確認選單名稱，再照卡片設定。GR IV 另附刷 LUTSmith 的檢查與還原清單。</p>
+  </header>
+
+  <nav class="rebate" role="tablist" aria-label="相機">
+    <button role="tab" id="tab-gr4" data-panel="gr4"><span class="fr">01A</span>GR IV</button>
+    <button role="tab" id="tab-gr3x" data-panel="gr3x"><span class="fr">02A</span>GR IIIx</button>
+    <button role="tab" id="tab-rx100" data-panel="rx100"><span class="fr">03A</span>RX100 VII</button>
+    <button role="tab" id="tab-checklist" data-panel="checklist"><span class="fr">04A</span>GR IV 刷機清單</button>
+  </nav>
+
+  <main>
+    <section class="panel" id="panel-gr4" role="tabpanel" aria-labelledby="tab-gr4"></section>
+    <section class="panel" id="panel-gr3x" role="tabpanel" aria-labelledby="tab-gr3x" hidden></section>
+    <section class="panel" id="panel-rx100" role="tabpanel" aria-labelledby="tab-rx100" hidden></section>
+    <section class="panel" id="panel-checklist" role="tabpanel" aria-labelledby="tab-checklist" hidden>
+      <div class="cam-head"><h2>GR IV × GR4-LUTSmith 檢查與還原清單</h2>
+        <p>依 GR4-LUTSmith v2.2.0 說明與 Ricoh 官方更新頁整理（2026-10-15）。標「通用做法」的是一般韌體作業習慣，兩份來源沒有寫。勾選狀態只存在這台裝置的瀏覽器。</p></div>
+      <div class="ck-intro">
+        <div class="ck-bar"><span id="ck-count">0 / 0</span><div class="ck-meter"><span id="ck-meter"></span></div><button class="reset" id="ck-reset" type="button">清除勾選</button></div>
+      </div>
+      <div class="ck-body">
+<!--__CHECKLIST__-->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>配方數值引用自各原作者網頁，著作權歸原作者；畫面描述為本頁改寫。設定前請以相機實際選單為準，不同韌體版本的選項可能不同。</div>
+    <div>資料怎麼來的：Claude 與 Antigravity（Gemini）兩個不同家族的模型各自獨立蒐集。兩台 GR 的配方中兩邊都找到的 28 組，逐項比對 244 個參數全部一致。只有 Gemini 找到的 42 組逐一打開原頁核對：30 組因網址錯誤、數值對不上或參數不完整不收，2 組與既有資料重複，收下 10 組；核對時另在同一來源頁補上 4 組。官方參數以 GR IV 英文說明書與 RX100 VII 說明指南為準。</div>
+    <div>整理：2026-10-15　原始碼：<a href="https://github.com/henrychao521/camera-looks" target="_blank" rel="noopener">github.com/henrychao521/camera-looks</a></div>
+  </footer>
+</div>
+
+<script>
+const DATA = /*__DATA__*/null;
+const CAM_INTRO = {
+  gr4: "Image Control 選基本風格後微調參數，可存進 Custom 1–3；韌體 1.04 起可用 GR WORLD App 把照片裡的設定寫回相機。",
+  gr3x: "參數和 GR III 相同，GR III 的配方可以直接用；能存的自訂槽位比 GR IV 少，也不能用 GR WORLD 寫入。",
+  rx100: "色彩靠 Creative Style、白平衡微調與 DRO 組合；影片可用 Picture Profile。機身不能載入 LUT。"
+};
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} },
+  del(k) { try { localStorage.removeItem(k); } catch (e) {} }
+};
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const isUrl = s => /^https?:\/\//.test(String(s));
+
+function renderValue(v) {
+  if (v == null) return "";
+  if (Array.isArray(v)) {
+    if (v.every(x => typeof x !== "object")) return '<div class="chips">' + v.map(x => `<span class="chip">${esc(x)}</span>`).join("") + "</div>";
+    return v.map(x => `<div>${renderValue(x)}</div>`).join("");
+  }
+  if (typeof v === "object") {
+    return '<dl class="kv">' + Object.entries(v).map(([k, x]) => `<dt>${esc(k)}</dt><dd>${renderValue(x)}</dd>`).join("") + "</dl>";
+  }
+  return isUrl(v) ? `<a href="${esc(v)}" target="_blank" rel="noopener">${esc(v)}</a>` : esc(v);
+}
+
+function specHtml(p) {
+  if (!p) return "";
+  const parts = [];
+  for (const [k, v] of Object.entries(p)) {
+    if (k === "sources") continue;
+    const label = { imageControls: "基本風格（Image Control）", creativeStyles: "Creative Style", pictureEffects: "Picture Effect",
+      adjustable: "可調參數", whiteBalance: "白平衡", pictureProfile: "Picture Profile", lutSupport: "LUT 支援", notes: "備註",
+      imageControlsNote: "風格說明", relatedSettings: "相關設定", customSlots: "自訂槽位", firmwareHistory: "韌體歷史", variants: "衍生機型",
+      firmware: "韌體", otherImageSettings: "其他影像設定", system: "色彩系統", pictureEffectRestrictions: "Picture Effect 限制",
+      dro: "DRO／Auto HDR", gammaDispAssist: "Gamma 顯示輔助", otherImage: "其他影像設定", manualCheck: "說明書核對" }[k] || k;
+    if (k === "adjustable" && Array.isArray(v) && v.length && typeof v[0] === "object") {
+      const rows = v.map(a => `<tr><td>${esc(a.nameZh || "")}</td><td>${esc(a.name || "")}</td><td class="mono">${esc(a.range || "")}</td><td>${esc([a.appliesTo, a.notes, a.confidence].filter(Boolean).join("；"))}</td></tr>`).join("");
+      parts.push(`<div><h4>${label}</h4><div class="tbl-wrap"><table class="params"><thead><tr><th>參數</th><th>選單名稱</th><th>範圍</th><th>適用／備註</th></tr></thead><tbody>${rows}</tbody></table></div></div>`);
+    } else {
+      parts.push(`<div><h4>${esc(label)}</h4>${renderValue(v)}</div>`);
+    }
+  }
+  if (p.sources && p.sources.length) {
+    parts.push(`<div class="srcs">官方來源：${p.sources.map(s => isUrl(s) ? `<a href="${esc(s)}" target="_blank" rel="noopener">${esc(s)}</a>` : esc(s)).join("、")}</div>`);
+  }
+  return `<details class="spec"><summary>相機可調參數</summary><div class="spec-body">${parts.join("")}</div></details>`;
+}
+
+function baseOf(r) { return String(r.base || r.settings?.["Image Control"] || r.settings?.["Creative Style"] || "其他"); }
+
+function recipeText(cam, r) {
+  const lines = [`${r.name}${r.nameZh ? "（" + r.nameZh + "）" : ""}`, `基底：${baseOf(r)}`];
+  for (const [k, v] of Object.entries(r.settings || {})) lines.push(`${k}: ${v}`);
+  lines.push(`出處：${r.author || ""} ${r.sourceUrl || ""}`.trim());
+  return lines.join("\n");
+}
+
+function cardHtml(cam, r, i) {
+  const rows = Object.entries(r.settings || {}).map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("");
+  const badges = [];
+  if (r.originalModel && cam !== "rx100" && !String(r.originalModel).includes(DATA[cam].camera.replace(/^Ricoh\s+/i, ""))) badges.push(`<span class="badge warn">原為 ${esc(r.originalModel)} 寫</span>`);
+  if (cam === "rx100" && r.originalModel) badges.push(`<span class="badge ${/RX100\s*(VII|M7)/i.test(r.originalModel) ? "ok" : "warn"}">原為 ${esc(r.originalModel)}</span>`);
+  if (r.rx100m7Compatible) badges.push(`<span class="badge ${/^完全/.test(r.rx100m7Compatible) ? "ok" : "warn"}" title="${esc(r.rx100m7Compatible)}">RX100 VII：${esc(String(r.rx100m7Compatible).slice(0, 2))}</span>`);
+  if (r.type === "video") badges.push(`<span class="badge ok">影片</span>`);
+  if (r.foundBy === "antigravity") badges.push(`<span class="badge ok" title="由 Antigravity（Gemini）獨立搜尋找到，Claude 逐頁核對原頁後收錄">Gemini 找到・已核對</span>`);
+  if (r.verified === false || r.verified === "false") badges.push(`<span class="badge warn" title="只看到搜尋摘要，沒有讀到原頁">未讀到原頁</span>`);
+  const src = r.sourceUrl ? `<a href="${esc(r.sourceUrl)}" target="_blank" rel="noopener">${esc(r.author || "原文")}</a>` : esc(r.author || "");
+  return `<article class="card">
+    <div class="card-top">
+      <div class="frame"><span>${String(i + 1).padStart(2, "0")}</span><span>${esc(baseOf(r))}</span></div>
+      <h3>${esc(r.name)}</h3>
+      ${r.nameZh ? `<div class="zh">${esc(r.nameZh)}</div>` : ""}
+      ${r.lookZh ? `<p class="look">${esc(r.lookZh)}${r.bestFor ? `　適合：${esc(r.bestFor)}` : ""}</p>` : ""}
+    </div>
+    <dl class="readout">${rows}</dl>
+    <div class="card-foot">
+      ${badges.length ? `<div class="row" style="justify-content:flex-start">${badges.join("")}</div>` : ""}
+      ${r.rx100m7Compatible && !/^完全/.test(r.rx100m7Compatible) ? `<div>${esc(r.rx100m7Compatible)}</div>` : ""}
+      <div class="row"><span>出處：${src}</span><button class="copy" type="button" data-cam="${cam}" data-i="${i}">複製設定</button></div>
+    </div>
+  </article>`;
+}
+
+function renderPanel(cam) {
+  const d = DATA[cam];
+  const el = document.getElementById("panel-" + cam);
+  const bases = [...new Set(d.recipes.map(baseOf))].sort();
+  el.innerHTML = `
+    <div class="cam-head"><h2>${esc(d.camera)}</h2><span class="count" id="count-${cam}"></span><p>${esc(CAM_INTRO[cam] || "")}</p></div>
+    ${specHtml(d.officialParams)}
+    <div class="filters">
+      <input type="search" id="q-${cam}" placeholder="搜尋配方名稱、作者、場景" aria-label="搜尋配方">
+      <select id="b-${cam}" aria-label="依基底篩選"><option value="">全部基底</option>${bases.map(b => `<option>${esc(b)}</option>`).join("")}</select>
+    </div>
+    <div class="grid" id="grid-${cam}"></div>
+    ${d.gaps && d.gaps.length ? `<div class="gaps"><strong>查不到或有出入的地方</strong><ul>${d.gaps.map(g => `<li>${esc(g)}</li>`).join("")}</ul></div>` : ""}`;
+  const draw = () => {
+    const q = document.getElementById("q-" + cam).value.trim().toLowerCase();
+    const b = document.getElementById("b-" + cam).value;
+    const list = d.recipes.map((r, i) => [r, i]).filter(([r]) =>
+      (!b || baseOf(r) === b) &&
+      (!q || [r.name, r.nameZh, r.author, r.lookZh, r.bestFor, baseOf(r)].join(" ").toLowerCase().includes(q)));
+    document.getElementById("grid-" + cam).innerHTML = list.length ? list.map(([r, i]) => cardHtml(cam, r, i)).join("") : '<p class="empty">沒有符合的配方，換個關鍵字或選「全部基底」。</p>';
+    document.getElementById("count-" + cam).textContent = `${list.length} / ${d.recipes.length} 組`;
+  };
+  el.querySelector("#q-" + cam).addEventListener("input", draw);
+  el.querySelector("#b-" + cam).addEventListener("change", draw);
+  draw();
+}
+
+document.addEventListener("click", async e => {
+  const btn = e.target.closest("button.copy");
+  if (!btn) return;
+  const r = DATA[btn.dataset.cam].recipes[+btn.dataset.i];
+  const text = recipeText(btn.dataset.cam, r);
+  try { await navigator.clipboard.writeText(text); btn.textContent = "已複製"; }
+  catch (err) {
+    const ta = document.createElement("textarea"); ta.value = text; btn.after(ta); ta.select();
+    btn.textContent = "請手動複製";
+  }
+  setTimeout(() => { btn.textContent = "複製設定"; }, 1600);
+});
+
+/* 分頁 */
+const tabs = [...document.querySelectorAll("nav.rebate button")];
+function show(id) {
+  if (!tabs.some(t => t.dataset.panel === id)) id = "gr4";
+  tabs.forEach(t => t.setAttribute("aria-selected", t.dataset.panel === id ? "true" : "false"));
+  document.querySelectorAll(".panel").forEach(p => { p.hidden = p.id !== "panel-" + id; });
+  store.set("camlooks-tab", id);
+}
+tabs.forEach(t => t.addEventListener("click", () => { show(t.dataset.panel); history.replaceState(null, "", "#" + t.dataset.panel); }));
+
+/* 清單勾選 */
+const boxes = [...document.querySelectorAll(".ck-item input")];
+let saved = {};
+try { saved = JSON.parse(store.get("camlooks-ck") || "{}"); } catch (e) { saved = {}; }
+boxes.forEach(b => { b.checked = !!saved[b.id]; });
+function tally() {
+  const done = boxes.filter(b => b.checked).length;
+  document.getElementById("ck-count").textContent = `${done} / ${boxes.length} 項`;
+  document.getElementById("ck-meter").style.width = (boxes.length ? done / boxes.length * 100 : 0) + "%";
+  document.querySelectorAll(".ck-prog").forEach(p => {
+    const s = boxes.filter(b => b.dataset.sec === p.dataset.sec);
+    p.textContent = s.length ? `${s.filter(b => b.checked).length}/${s.length}` : "";
+  });
+}
+boxes.forEach(b => b.addEventListener("change", () => {
+  const m = {}; boxes.forEach(x => { if (x.checked) m[x.id] = 1; });
+  store.set("camlooks-ck", JSON.stringify(m)); tally();
+}));
+document.getElementById("ck-reset").addEventListener("click", () => { boxes.forEach(b => { b.checked = false; }); store.del("camlooks-ck"); tally(); });
+
+["gr4", "gr3x", "rx100"].forEach(c => { if (DATA && DATA[c]) renderPanel(c); });
+tally();
+show(location.hash.slice(1) || store.get("camlooks-tab") || "gr4");
+</script>

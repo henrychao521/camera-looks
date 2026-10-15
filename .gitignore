@@ -1,0 +1,8 @@
+# 不上傳：官方說明書（Ricoh／Sony 著作）、研究原始軌跡、Artifact 用輸出
+manuals/
+research/
+dist/
+.DS_Store
+._*
+__pycache__/
+dispatch/
