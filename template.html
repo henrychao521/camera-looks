@@ -76,7 +76,10 @@ table.params { border-collapse: collapse; width: 100%; font-size: 13.5px; }
 table.params th, table.params td { text-align: left; padding: 5px 10px 5px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
 table.params th { font-weight: 500; color: var(--muted); font-size: 12px; letter-spacing: .06em; }
 table.params td.mono { font-family: var(--font-mono); min-width: 9ch; }
-.kv { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 4px 14px; font-size: 13.5px; }
+.kv { display: grid; grid-template-columns: minmax(0, max-content) minmax(0, 1fr); gap: 4px 14px; font-size: 13.5px; min-width: 0; }
+.kv dt { overflow-wrap: anywhere; max-width: 38vw; }
+details.spec .spec-body > div { min-width: 0; }
+@media (max-width: 520px) { .kv { grid-template-columns: minmax(0, 1fr); } .kv dt { max-width: none; font-weight: 500; } .kv dd { margin-bottom: 6px; } }
 .kv dt { color: var(--muted); }
 .kv dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
 .srcs { font-size: 12.5px; color: var(--muted); overflow-wrap: anywhere; }
@@ -98,10 +101,14 @@ article.card { background: var(--paper); border: 1px solid var(--line); border-r
 dl.readout { margin: 0; padding: 10px 14px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1px 12px; font-size: 13px; flex: 1; align-content: start; }
 dl.readout dt { color: var(--muted); overflow-wrap: anywhere; }
 dl.readout dd { margin: 0; font-family: var(--font-mono); text-align: right; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; max-width: 22ch; }
+dl.readout .en, .chip .en, .kv .en { display: block; font-size: 10.5px; color: var(--muted); font-family: var(--font-mono); font-weight: 400; line-height: 1.25; }
+.chip .en { display: inline; margin-left: 4px; }
+dl.readout { row-gap: 4px; }
 dl.readout dt.base, dl.readout dd.base { font-weight: 700; color: var(--fg); }
 .card-foot { padding: 8px 14px 12px; display: grid; gap: 6px; font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--line); }
 .card-foot .row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 12px; align-items: center; }
-.badge { font-size: 11.5px; border-radius: 3px; padding: 0 6px; border: 1px solid currentColor; white-space: nowrap; }
+.badge { font-size: 11.5px; border-radius: 3px; padding: 0 6px; border: 1px solid currentColor; max-width: 100%; overflow-wrap: anywhere; }
+.card-foot .row { min-width: 0; }
 .badge.ok { color: var(--ok); }
 .badge.warn { color: var(--warn); }
 button.copy { appearance: none; font: inherit; font-size: 12.5px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); padding: 3px 10px; border-radius: 3px; cursor: pointer; }
@@ -144,7 +151,7 @@ footer { margin-top: 40px; font-size: 12.5px; color: var(--muted); border-top: 1
   <header class="top">
     <div class="eyebrow">GR IV · GR IIIx · RX100 VII</div>
     <h1><span class="zh">手邊相機配方本</span></h1>
-    <p class="lede">三台相機在機身上直接可以設定的畫面配方。每組都附原作者與出處，數值照原文；先看「相機可調參數」確認選單名稱，再照卡片設定。GR IV 另附刷 LUTSmith 的檢查與還原清單。</p>
+    <p class="lede">三台相機在機身上直接可以設定的畫面配方。每組都附原作者與出處，數值照原文。參數名稱用<strong>相機設成繁體中文時畫面上的官方用語</strong>，下方小字是英文選單名稱，方便對照原文配方。GR IV 另附刷 LUTSmith 的檢查與還原清單。</p>
   </header>
 
   <nav class="rebate" role="tablist" aria-label="相機">
@@ -179,6 +186,8 @@ footer { margin-top: 40px; font-size: 12.5px; color: var(--muted); border-top: 1
 
 <script>
 const DATA = /*__DATA__*/null;
+const TERMS = /*__TERMS__*/null;
+const FAM = { gr4: "gr", gr3x: "gr", rx100: "sony" };
 const CAM_INTRO = {
   gr4: "Image Control 選基本風格後微調參數，可存進 Custom 1–3；韌體 1.04 起可用 GR WORLD App 把照片裡的設定寫回相機。",
   gr3x: "參數和 GR III 相同，GR III 的配方可以直接用；能存的自訂槽位比 GR IV 少，也不能用 GR WORLD 寫入。",
@@ -195,7 +204,7 @@ const isUrl = s => /^https?:\/\//.test(String(s));
 function renderValue(v) {
   if (v == null) return "";
   if (Array.isArray(v)) {
-    if (v.every(x => typeof x !== "object")) return '<div class="chips">' + v.map(x => `<span class="chip">${esc(x)}</span>`).join("") + "</div>";
+    if (v.every(x => typeof x !== "object")) return '<div class="chips">' + v.map(x => { const z = renderValue.cam ? zhStyle(renderValue.cam, x) : ""; return `<span class="chip">${z ? esc(z) + `<span class="en">${esc(x)}</span>` : esc(x)}</span>`; }).join("") + "</div>";
     return v.map(x => `<div>${renderValue(x)}</div>`).join("");
   }
   if (typeof v === "object") {
@@ -204,8 +213,9 @@ function renderValue(v) {
   return isUrl(v) ? `<a href="${esc(v)}" target="_blank" rel="noopener">${esc(v)}</a>` : esc(v);
 }
 
-function specHtml(p) {
+function specHtml(cam, p) {
   if (!p) return "";
+  renderValue.cam = cam;
   const parts = [];
   for (const [k, v] of Object.entries(p)) {
     if (k === "sources") continue;
@@ -215,7 +225,7 @@ function specHtml(p) {
       firmware: "韌體", otherImageSettings: "其他影像設定", system: "色彩系統", pictureEffectRestrictions: "Picture Effect 限制",
       dro: "DRO／Auto HDR", gammaDispAssist: "Gamma 顯示輔助", otherImage: "其他影像設定", manualCheck: "說明書核對" }[k] || k;
     if (k === "adjustable" && Array.isArray(v) && v.length && typeof v[0] === "object") {
-      const rows = v.map(a => `<tr><td>${esc(a.nameZh || "")}</td><td>${esc(a.name || "")}</td><td class="mono">${esc(a.range || "")}</td><td>${esc([a.appliesTo, a.notes, a.confidence].filter(Boolean).join("；"))}</td></tr>`).join("");
+      const rows = v.map(a => `<tr><td>${esc(zhKey(cam, a.name) || a.nameZh || "")}</td><td>${esc(a.name || "")}</td><td class="mono">${esc(a.range || "")}</td><td>${esc([a.appliesTo, a.notes, a.confidence].filter(Boolean).join("；"))}</td></tr>`).join("");
       parts.push(`<div><h4>${label}</h4><div class="tbl-wrap"><table class="params"><thead><tr><th>參數</th><th>選單名稱</th><th>範圍</th><th>適用／備註</th></tr></thead><tbody>${rows}</tbody></table></div></div>`);
     } else {
       parts.push(`<div><h4>${esc(label)}</h4>${renderValue(v)}</div>`);
@@ -227,20 +237,47 @@ function specHtml(p) {
   return `<details class="spec"><summary>相機可調參數</summary><div class="spec-body">${parts.join("")}</div></details>`;
 }
 
+function T(cam) { return (TERMS && TERMS[FAM[cam]]) || { keys: {}, styles: {}, wb: [] }; }
+function zhKey(cam, k) { return T(cam).keys[k] || ""; }
+function zhStyle(cam, v) { return T(cam).styles[String(v).trim()] || ""; }
+function zhWB(cam, v) {
+  const s = String(v);
+  for (const [en, zh] of T(cam).wb) if (s.startsWith(en)) return zh + s.slice(en.length);
+  return "";
+}
+function zhValue(cam, k, v) {
+  if (/^(Image Control|Creative Style|Picture Effect)$/.test(k)) return zhStyle(cam, v);
+  if (k === "White Balance") return zhWB(cam, v);
+  return "";
+}
+function zhBase(cam, b) {
+  b = String(b);
+  let m;
+  if ((m = b.match(/^Creative Style:\s*(.+)$/))) return "風格設定：" + (zhStyle(cam, m[1]) || m[1]);
+  if ((m = b.match(/^Picture Effect:\s*(.+)$/))) return "相片效果：" + (zhStyle(cam, m[1]) || m[1]);
+  if ((m = b.match(/^PP:\s*Gamma\s*(.+?)\s*\/\s*Color Mode\s*(.+)$/))) return `相片設定檔：Gamma ${m[1]}／色彩模式 ${m[2]}`;
+  return zhStyle(cam, b) || b;
+}
 function baseOf(r) { return String(r.base || r.settings?.["Image Control"] || r.settings?.["Creative Style"] || "其他"); }
 
 function recipeText(cam, r) {
-  const lines = [`${r.name}${r.nameZh ? "（" + r.nameZh + "）" : ""}`, `基底：${baseOf(r)}`];
-  for (const [k, v] of Object.entries(r.settings || {})) lines.push(`${k}: ${v}`);
+  const lines = [`${r.name}${r.nameZh ? "（" + r.nameZh + "）" : ""}`, `基底：${zhBase(cam, baseOf(r))}`];
+  for (const [k, v] of Object.entries(r.settings || {})) {
+    const zk = zhKey(cam, k), zv = zhValue(cam, k, v);
+    lines.push(`${zk || k}${zk ? `（${k}）` : ""}：${zv ? `${zv}（${v}）` : v}`);
+  }
   lines.push(`出處：${r.author || ""} ${r.sourceUrl || ""}`.trim());
   return lines.join("\n");
 }
 
 function cardHtml(cam, r, i) {
-  const rows = Object.entries(r.settings || {}).map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("");
+  const rows = Object.entries(r.settings || {}).map(([k, v]) => {
+    const zk = zhKey(cam, k), zv = zhValue(cam, k, v);
+    return `<dt>${zk ? `${esc(zk)}<span class="en">${esc(k)}</span>` : esc(k)}</dt><dd>${zv ? `${esc(zv)}<span class="en">${esc(v)}</span>` : esc(v)}</dd>`;
+  }).join("");
   const badges = [];
   if (r.originalModel && cam !== "rx100" && !String(r.originalModel).includes(DATA[cam].camera.replace(/^Ricoh\s+/i, ""))) badges.push(`<span class="badge warn">原為 ${esc(r.originalModel)} 寫</span>`);
-  if (cam === "rx100" && r.originalModel) badges.push(`<span class="badge ${/RX100\s*(VII|M7)/i.test(r.originalModel) ? "ok" : "warn"}">原為 ${esc(r.originalModel)}</span>`);
+  if (cam === "rx100" && r.originalModel) { const om = String(r.originalModel); badges.push(`<span class="badge ${/RX100\s*(VII|M7)/i.test(om) ? "ok" : "warn"}" title="${esc(om)}">原為 ${esc(om.length > 28 ? om.slice(0, 26) + "…" : om)}</span>`); }
   if (r.rx100m7Compatible) badges.push(`<span class="badge ${/^完全/.test(r.rx100m7Compatible) ? "ok" : "warn"}" title="${esc(r.rx100m7Compatible)}">RX100 VII：${esc(String(r.rx100m7Compatible).slice(0, 2))}</span>`);
   if (r.type === "video") badges.push(`<span class="badge ok">影片</span>`);
   if (r.foundBy === "antigravity") badges.push(`<span class="badge ok" title="由 Antigravity（Gemini）獨立搜尋找到，Claude 逐頁核對原頁後收錄">Gemini 找到・已核對</span>`);
@@ -248,7 +285,7 @@ function cardHtml(cam, r, i) {
   const src = r.sourceUrl ? `<a href="${esc(r.sourceUrl)}" target="_blank" rel="noopener">${esc(r.author || "原文")}</a>` : esc(r.author || "");
   return `<article class="card">
     <div class="card-top">
-      <div class="frame"><span>${String(i + 1).padStart(2, "0")}</span><span>${esc(baseOf(r))}</span></div>
+      <div class="frame"><span>${String(i + 1).padStart(2, "0")}</span><span>${esc(zhBase(cam, baseOf(r)))}</span></div>
       <h3>${esc(r.name)}</h3>
       ${r.nameZh ? `<div class="zh">${esc(r.nameZh)}</div>` : ""}
       ${r.lookZh ? `<p class="look">${esc(r.lookZh)}${r.bestFor ? `　適合：${esc(r.bestFor)}` : ""}</p>` : ""}
@@ -268,10 +305,10 @@ function renderPanel(cam) {
   const bases = [...new Set(d.recipes.map(baseOf))].sort();
   el.innerHTML = `
     <div class="cam-head"><h2>${esc(d.camera)}</h2><span class="count" id="count-${cam}"></span><p>${esc(CAM_INTRO[cam] || "")}</p></div>
-    ${specHtml(d.officialParams)}
+    ${specHtml(cam, d.officialParams)}
     <div class="filters">
       <input type="search" id="q-${cam}" placeholder="搜尋配方名稱、作者、場景" aria-label="搜尋配方">
-      <select id="b-${cam}" aria-label="依基底篩選"><option value="">全部基底</option>${bases.map(b => `<option>${esc(b)}</option>`).join("")}</select>
+      <select id="b-${cam}" aria-label="依基底篩選"><option value="">全部基底</option>${bases.map(b => `<option value="${esc(b)}">${esc(zhBase(cam, b))}</option>`).join("")}</select>
     </div>
     <div class="grid" id="grid-${cam}"></div>
     ${d.gaps && d.gaps.length ? `<div class="gaps"><strong>查不到或有出入的地方</strong><ul>${d.gaps.map(g => `<li>${esc(g)}</li>`).join("")}</ul></div>` : ""}`;
@@ -280,7 +317,7 @@ function renderPanel(cam) {
     const b = document.getElementById("b-" + cam).value;
     const list = d.recipes.map((r, i) => [r, i]).filter(([r]) =>
       (!b || baseOf(r) === b) &&
-      (!q || [r.name, r.nameZh, r.author, r.lookZh, r.bestFor, baseOf(r)].join(" ").toLowerCase().includes(q)));
+      (!q || [r.name, r.nameZh, r.author, r.lookZh, r.bestFor, baseOf(r), zhBase(cam, baseOf(r))].join(" ").toLowerCase().includes(q)));
     document.getElementById("grid-" + cam).innerHTML = list.length ? list.map(([r, i]) => cardHtml(cam, r, i)).join("") : '<p class="empty">沒有符合的配方，換個關鍵字或選「全部基底」。</p>';
     document.getElementById("count-" + cam).textContent = `${list.length} / ${d.recipes.length} 組`;
   };

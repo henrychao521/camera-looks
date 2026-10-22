@@ -6,3 +6,5 @@ dist/
 ._*
 __pycache__/
 dispatch/
+raw_screens/
+實機畫面收集需求.md

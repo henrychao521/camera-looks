@@ -1,0 +1,215 @@
+{
+ "_source": "GR：RICOH GR IV 繁體中文使用說明書（gr-4_ch.pdf）；Sony：DSC-RX100M7 說明指南繁體中文版（helpguide.sony.net/dsc/1920/v1/zh-tw）。2026-10-22 整理。",
+ "gr": {
+  "keys": {
+   "Image Control": "影像控制",
+   "Saturation": "飽和度",
+   "Hue": "色相",
+   "High/Low Key": "影調",
+   "Contrast": "對比度",
+   "Contrast (Highlight)": "對比度（亮部）",
+   "Contrast (Shadow)": "對比度（暗部）",
+   "Sharpness": "銳度",
+   "Shading": "明暗",
+   "Clarity": "清晰",
+   "Toning": "色調",
+   "Filter Effect": "濾光鏡效果",
+   "Grain": "粒紋感",
+   "Grain Effect": "粒紋感",
+   "Grain Size/Intensity": "粒紋感（大小／強度）",
+   "HDR Tone Level": "HDR 色調效果",
+   "Color Tone": "色調（Color Tone）",
+   "Highlight Correction": "高亮校正",
+   "Shadow Correction": "陰影校正",
+   "Peripheral Illumination Correction": "周邊光量校正",
+   "Peripheral Illumin. Corr.": "周邊光量校正",
+   "High-ISO Noise Reduction": "高感光度 NR",
+   "Noise Reduction": "高感光度 NR",
+   "White Balance": "白平衡",
+   "WB Compensation": "白平衡微調",
+   "WB Shift": "白平衡微調",
+   "ISO": "感光度",
+   "Exposure Comp": "曝光補償",
+   "Exposure Compensation": "曝光補償"
+  },
+  "styles": {
+   "Standard": "標準",
+   "Vivid": "鮮艷",
+   "Monotone": "單色",
+   "Soft Monotone": "軟單色",
+   "Hard Monotone": "硬單色",
+   "Hi-Contrast B&W": "高對比度黑白",
+   "Negative Film": "底片",
+   "Positive Film": "正片",
+   "Cinema (Yellow)": "電影（黃色）",
+   "Cinema (Green)": "電影（綠色）",
+   "Cross Processing": "正負逆沖",
+   "Bleach Bypass": "跳漂白",
+   "Retro": "懷舊",
+   "HDR Tone": "HDR 色調"
+  },
+  "wb": [
+   [
+    "Auto White Priority",
+    "自動白平衡（白色優先）"
+   ],
+   [
+    "AWB (White Priority)",
+    "自動白平衡（白色優先）"
+   ],
+   [
+    "AWB（ホワイト優先",
+    "自動白平衡（白色優先）"
+   ],
+   [
+    "Auto (AWB)",
+    "自動白平衡"
+   ],
+   [
+    "Auto",
+    "自動白平衡"
+   ],
+   [
+    "Daylight",
+    "日光"
+   ],
+   [
+    "Shade",
+    "陰影"
+   ],
+   [
+    "Cloudy",
+    "陰天"
+   ],
+   [
+    "Fluorescent D",
+    "日光色螢光燈"
+   ],
+   [
+    "Fluorescent N",
+    "日光白色螢光燈"
+   ],
+   [
+    "Fluorescent W",
+    "冷白色螢光燈"
+   ],
+   [
+    "Fluorescent L",
+    "暖白色螢光燈"
+   ],
+   [
+    "Tungsten",
+    "鎢絲燈"
+   ],
+   [
+    "CT ",
+    "色溫 "
+   ]
+  ]
+ },
+ "sony": {
+  "keys": {
+   "Creative Style": "風格設定",
+   "Creative Style (原文寫法)": "風格設定（原文寫法）",
+   "Contrast": "對比度",
+   "Saturation": "飽和度",
+   "Sharpness": "銳利度",
+   "White Balance": "白平衡",
+   "WB Shift": "白平衡微調",
+   "Exposure Comp.": "曝光補償",
+   "DRO": "動態範圍最佳化",
+   "Picture Effect": "相片效果",
+   "Black Level": "黑色等級",
+   "Gamma": "Gamma",
+   "Black Gamma": "黑色Gamma",
+   "Black Gamma Range": "黑色Gamma 範圍",
+   "Black Gamma Level": "黑色Gamma 等級",
+   "Knee": "膝點",
+   "Knee Mode": "膝點 模式",
+   "Knee Max Point": "膝點 最大點",
+   "Knee Sensitivity": "膝點 靈敏度",
+   "Knee Manual Point": "膝點 點",
+   "Knee Manual Slope": "膝點 斜率",
+   "Color Mode": "色彩模式",
+   "Color Phase": "色彩相位",
+   "Color Depth": "色彩濃度",
+   "Detail": "細節",
+   "Detail Adjust": "細節 調整",
+   "Detail Level": "細節 等級",
+   "Detail Adjust Mode": "細節 模式",
+   "V/H Balance": "V/H平衡",
+   "B/W Balance": "B/W平衡",
+   "Limit": "限制",
+   "Crispening": "Crispning",
+   "Hi-Light Detail": "高亮細節調整",
+   "Color Depth R": "色彩濃度 R",
+   "Color Depth G": "色彩濃度 G",
+   "Color Depth B": "色彩濃度 B",
+   "Color Depth C": "色彩濃度 C",
+   "Color Depth M": "色彩濃度 M",
+   "Color Depth Y": "色彩濃度 Y"
+  },
+  "styles": {
+   "Standard": "標準",
+   "Vivid": "鮮明",
+   "Neutral": "中性",
+   "Clear": "透明",
+   "Deep": "深色",
+   "Light": "淡色",
+   "Portrait": "肖像",
+   "Landscape": "風景",
+   "Sunset": "日落",
+   "Night Scene": "夜景",
+   "Autumn Leaves": "秋葉",
+   "Black & White": "黑白",
+   "Sepia": "褐色",
+   "Retro Photo": "懷舊相片",
+   "Toy Camera": "玩具相機",
+   "Partial Color": "部分色彩",
+   "High Contrast Mono.": "高對比度單色",
+   "Rich-tone Mono.": "豐富色調單色"
+  },
+  "wb": [
+   [
+    "Fluor.: Warm White",
+    "螢光燈：暖白色"
+   ],
+   [
+    "Fluor.: Cool White",
+    "螢光燈：冷白色"
+   ],
+   [
+    "Fluor.: Day White",
+    "螢光燈：白天白光"
+   ],
+   [
+    "Fluor.: Daylight",
+    "螢光燈：日光"
+   ],
+   [
+    "C.Temp./Filter",
+    "色溫/彩色濾鏡"
+   ],
+   [
+    "Incandescent",
+    "白熾燈"
+   ],
+   [
+    "Daylight",
+    "日光"
+   ],
+   [
+    "Shade",
+    "陰影"
+   ],
+   [
+    "Cloudy",
+    "陰天"
+   ],
+   [
+    "Auto",
+    "自動"
+   ]
+  ]
+ }
+}

@@ -114,7 +114,9 @@ def main():
     ck = checklist_html((ROOT / "GR4_LUTSmith_檢查與還原清單.md").read_text(encoding="utf-8"))
     tpl = (ROOT / "template.html").read_text(encoding="utf-8")
     payload = json.dumps(cams, ensure_ascii=False).replace("</", "<\\/")
-    page = tpl.replace("/*__DATA__*/null", payload).replace("<!--__CHECKLIST__-->", ck)
+    terms = json.dumps(json.loads((DATA / "terms.json").read_text(encoding="utf-8")), ensure_ascii=False).replace("</", "<\\/")
+    page = (tpl.replace("/*__DATA__*/null", payload).replace("/*__TERMS__*/null", terms)
+            .replace("<!--__CHECKLIST__-->", ck))
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(page, encoding="utf-8")
     # GitHub Pages 版：Artifact 發布時會自動包外殼，Pages 要自己補完整文件結構
